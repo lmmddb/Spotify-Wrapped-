@@ -1,2756 +1,609 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    },
-    "widgets": {
-      "application/vnd.jupyter.widget-state+json": {
-        "db5712fa39034f30b4f38cacb19341e8": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "VBoxModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_dom_classes": [],
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "VBoxModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/controls",
-            "_view_module_version": "1.5.0",
-            "_view_name": "VBoxView",
-            "box_style": "",
-            "children": [
-              "IPY_MODEL_ad7bc3d6c21841a48636f5d0999e46a3",
-              "IPY_MODEL_1f41e32f244041f8852de039a6717c50",
-              "IPY_MODEL_cffa9c6f39144c658e8ede876eca437e",
-              "IPY_MODEL_09c05df5b660452e9aa64ab9fc1808db",
-              "IPY_MODEL_991479ea60c24ab59710101b979e06d3"
-            ],
-            "layout": "IPY_MODEL_06d39555a7a9462a91f3aed25d93c6f4"
-          }
-        },
-        "ad7bc3d6c21841a48636f5d0999e46a3": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "HTMLModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_dom_classes": [],
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "HTMLModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/controls",
-            "_view_module_version": "1.5.0",
-            "_view_name": "HTMLView",
-            "description": "",
-            "description_tooltip": null,
-            "layout": "IPY_MODEL_7808e53e571d4adf9d8b76fdbe4bba98",
-            "placeholder": "​",
-            "style": "IPY_MODEL_27b210cfca8f47dd8a0403aa97824807",
-            "value": "<h3>🎵 Chargement des données Spotify</h3>"
-          }
-        },
-        "1f41e32f244041f8852de039a6717c50": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "DropdownModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_dom_classes": [],
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "DropdownModel",
-            "_options_labels": [
-              "📁 Google Drive",
-              "💾 Upload local"
-            ],
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/controls",
-            "_view_module_version": "1.5.0",
-            "_view_name": "DropdownView",
-            "description": "Source :",
-            "description_tooltip": null,
-            "disabled": false,
-            "index": 0,
-            "layout": "IPY_MODEL_a7d65664476a48d29e49801b7277617b",
-            "style": "IPY_MODEL_34492c3a9eb6431597682b5e191e888b"
-          }
-        },
-        "cffa9c6f39144c658e8ede876eca437e": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "TextModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_dom_classes": [],
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "TextModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/controls",
-            "_view_module_version": "1.5.0",
-            "_view_name": "TextView",
-            "continuous_update": true,
-            "description": "Chemin Drive :",
-            "description_tooltip": null,
-            "disabled": false,
-            "layout": "IPY_MODEL_1d5a299cb1ec40d695412489523d4f45",
-            "placeholder": "​",
-            "style": "IPY_MODEL_4fd01ca562b545a4a57d252dd22edc0d",
-            "value": "/content/drive/MyDrive/Spotify"
-          }
-        },
-        "09c05df5b660452e9aa64ab9fc1808db": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "ButtonModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_dom_classes": [],
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "ButtonModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/controls",
-            "_view_module_version": "1.5.0",
-            "_view_name": "ButtonView",
-            "button_style": "success",
-            "description": "📥 Charger les données",
-            "disabled": false,
-            "icon": "check",
-            "layout": "IPY_MODEL_4df5099480fe4aacb9514f49dda7f2bb",
-            "style": "IPY_MODEL_b5679d9d09f84004bd6ea5dfd1b06d26",
-            "tooltip": "Cliquez pour charger les fichiers"
-          }
-        },
-        "991479ea60c24ab59710101b979e06d3": {
-          "model_module": "@jupyter-widgets/output",
-          "model_name": "OutputModel",
-          "model_module_version": "1.0.0",
-          "state": {
-            "_dom_classes": [],
-            "_model_module": "@jupyter-widgets/output",
-            "_model_module_version": "1.0.0",
-            "_model_name": "OutputModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/output",
-            "_view_module_version": "1.0.0",
-            "_view_name": "OutputView",
-            "layout": "IPY_MODEL_5f97c35c393a413d9ed22cb959c00998",
-            "msg_id": "",
-            "outputs": [
-              {
-                "output_type": "stream",
-                "name": "stdout",
-                "text": [
-                  "Mounted at /content/drive\n"
-                ]
-              },
-              {
-                "output_type": "stream",
-                "name": "stdout",
-                "text": [
-                  "✓ StreamingHistory_music_0.json chargé (10000 lignes)\n"
-                ]
-              },
-              {
-                "output_type": "stream",
-                "name": "stdout",
-                "text": [
-                  "✓ StreamingHistory_music_1.json chargé (10000 lignes)\n"
-                ]
-              },
-              {
-                "output_type": "stream",
-                "name": "stdout",
-                "text": [
-                  "✓ StreamingHistory_music_2.json chargé (10000 lignes)\n"
-                ]
-              },
-              {
-                "output_type": "stream",
-                "name": "stdout",
-                "text": [
-                  "✓ StreamingHistory_music_3.json chargé (2075 lignes)\n",
-                  "\n",
-                  "📊 Total: 32075 enregistrements\n",
-                  "\n",
-                  "==================================================\n",
-                  "APERÇU DES DONNÉES :\n",
-                  "==================================================\n"
-                ]
-              },
-              {
-                "output_type": "display_data",
-                "data": {
-                  "text/plain": "            endTime   artistName  trackName  msPlayed\n0  2024-12-22 16:38         Rema       YAYO     40100\n1  2024-12-22 18:21  La Mano 1.9      I SAY     12203\n2  2024-12-22 18:22  La Mano 1.9      I SAY     96551\n3  2024-12-22 18:25         Kany      Magie    154666\n4  2024-12-22 18:27         Rema  Soundgasm    121080",
-                  "text/html": "\n  <div id=\"df-9c96261a-6152-4df6-ad91-d712ad409c8a\" class=\"colab-df-container\">\n    <div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>endTime</th>\n      <th>artistName</th>\n      <th>trackName</th>\n      <th>msPlayed</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>2024-12-22 16:38</td>\n      <td>Rema</td>\n      <td>YAYO</td>\n      <td>40100</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>2024-12-22 18:21</td>\n      <td>La Mano 1.9</td>\n      <td>I SAY</td>\n      <td>12203</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>2024-12-22 18:22</td>\n      <td>La Mano 1.9</td>\n      <td>I SAY</td>\n      <td>96551</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>2024-12-22 18:25</td>\n      <td>Kany</td>\n      <td>Magie</td>\n      <td>154666</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>2024-12-22 18:27</td>\n      <td>Rema</td>\n      <td>Soundgasm</td>\n      <td>121080</td>\n    </tr>\n  </tbody>\n</table>\n</div>\n    <div class=\"colab-df-buttons\">\n\n  <div class=\"colab-df-container\">\n    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-9c96261a-6152-4df6-ad91-d712ad409c8a')\"\n            title=\"Convert this dataframe to an interactive table.\"\n            style=\"display:none;\">\n\n  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n  </svg>\n    </button>\n\n  <style>\n    .colab-df-container {\n      display:flex;\n      gap: 12px;\n    }\n\n    .colab-df-convert {\n      background-color: #E8F0FE;\n      border: none;\n      border-radius: 50%;\n      cursor: pointer;\n      display: none;\n      fill: #1967D2;\n      height: 32px;\n      padding: 0 0 0 0;\n      width: 32px;\n    }\n\n    .colab-df-convert:hover {\n      background-color: #E2EBFA;\n      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n      fill: #174EA6;\n    }\n\n    .colab-df-buttons div {\n      margin-bottom: 4px;\n    }\n\n    [theme=dark] .colab-df-convert {\n      background-color: #3B4455;\n      fill: #D2E3FC;\n    }\n\n    [theme=dark] .colab-df-convert:hover {\n      background-color: #434B5C;\n      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n      fill: #FFFFFF;\n    }\n  </style>\n\n    <script>\n      const buttonEl =\n        document.querySelector('#df-9c96261a-6152-4df6-ad91-d712ad409c8a button.colab-df-convert');\n      buttonEl.style.display =\n        google.colab.kernel.accessAllowed ? 'block' : 'none';\n\n      async function convertToInteractive(key) {\n        const element = document.querySelector('#df-9c96261a-6152-4df6-ad91-d712ad409c8a');\n        const dataTable =\n          await google.colab.kernel.invokeFunction('convertToInteractive',\n                                                    [key], {});\n        if (!dataTable) return;\n\n        const docLinkHtml = 'Like what you see? Visit the ' +\n          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n          + ' to learn more about interactive tables.';\n        element.innerHTML = '';\n        dataTable['output_type'] = 'display_data';\n        await google.colab.output.renderOutput(dataTable, element);\n        const docLink = document.createElement('div');\n        docLink.innerHTML = docLinkHtml;\n        element.appendChild(docLink);\n      }\n    </script>\n  </div>\n\n\n    <div id=\"df-3a9149cd-fb34-4af3-9763-4f87ef7d8b73\">\n      <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-3a9149cd-fb34-4af3-9763-4f87ef7d8b73')\"\n                title=\"Suggest charts\"\n                style=\"display:none;\">\n\n<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n     width=\"24px\">\n    <g>\n        <path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z\"/>\n    </g>\n</svg>\n      </button>\n\n<style>\n  .colab-df-quickchart {\n      --bg-color: #E8F0FE;\n      --fill-color: #1967D2;\n      --hover-bg-color: #E2EBFA;\n      --hover-fill-color: #174EA6;\n      --disabled-fill-color: #AAA;\n      --disabled-bg-color: #DDD;\n  }\n\n  [theme=dark] .colab-df-quickchart {\n      --bg-color: #3B4455;\n      --fill-color: #D2E3FC;\n      --hover-bg-color: #434B5C;\n      --hover-fill-color: #FFFFFF;\n      --disabled-bg-color: #3B4455;\n      --disabled-fill-color: #666;\n  }\n\n  .colab-df-quickchart {\n    background-color: var(--bg-color);\n    border: none;\n    border-radius: 50%;\n    cursor: pointer;\n    display: none;\n    fill: var(--fill-color);\n    height: 32px;\n    padding: 0;\n    width: 32px;\n  }\n\n  .colab-df-quickchart:hover {\n    background-color: var(--hover-bg-color);\n    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);\n    fill: var(--button-hover-fill-color);\n  }\n\n  .colab-df-quickchart-complete:disabled,\n  .colab-df-quickchart-complete:disabled:hover {\n    background-color: var(--disabled-bg-color);\n    fill: var(--disabled-fill-color);\n    box-shadow: none;\n  }\n\n  .colab-df-spinner {\n    border: 2px solid var(--fill-color);\n    border-color: transparent;\n    border-bottom-color: var(--fill-color);\n    animation:\n      spin 1s steps(1) infinite;\n  }\n\n  @keyframes spin {\n    0% {\n      border-color: transparent;\n      border-bottom-color: var(--fill-color);\n      border-left-color: var(--fill-color);\n    }\n    20% {\n      border-color: transparent;\n      border-left-color: var(--fill-color);\n      border-top-color: var(--fill-color);\n    }\n    30% {\n      border-color: transparent;\n      border-left-color: var(--fill-color);\n      border-top-color: var(--fill-color);\n      border-right-color: var(--fill-color);\n    }\n    40% {\n      border-color: transparent;\n      border-right-color: var(--fill-color);\n      border-top-color: var(--fill-color);\n    }\n    60% {\n      border-color: transparent;\n      border-right-color: var(--fill-color);\n    }\n    80% {\n      border-color: transparent;\n      border-right-color: var(--fill-color);\n      border-bottom-color: var(--fill-color);\n    }\n    90% {\n      border-color: transparent;\n      border-bottom-color: var(--fill-color);\n    }\n  }\n</style>\n\n      <script>\n        async function quickchart(key) {\n          const quickchartButtonEl =\n            document.querySelector('#' + key + ' button');\n          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.\n          quickchartButtonEl.classList.add('colab-df-spinner');\n          try {\n            const charts = await google.colab.kernel.invokeFunction(\n                'suggestCharts', [key], {});\n          } catch (error) {\n            console.error('Error during call to suggestCharts:', error);\n          }\n          quickchartButtonEl.classList.remove('colab-df-spinner');\n          quickchartButtonEl.classList.add('colab-df-quickchart-complete');\n        }\n        (() => {\n          let quickchartButtonEl =\n            document.querySelector('#df-3a9149cd-fb34-4af3-9763-4f87ef7d8b73 button');\n          quickchartButtonEl.style.display =\n            google.colab.kernel.accessAllowed ? 'block' : 'none';\n        })();\n      </script>\n    </div>\n\n    </div>\n  </div>\n",
-                  "application/vnd.google.colaboratory.intrinsic+json": {
-                    "type": "dataframe",
-                    "summary": "{\n  \"name\": \"###########################################\",\n  \"rows\": 5,\n  \"fields\": [\n    {\n      \"column\": \"endTime\",\n      \"properties\": {\n        \"dtype\": \"object\",\n        \"num_unique_values\": 5,\n        \"samples\": [\n          \"2024-12-22 18:21\",\n          \"2024-12-22 18:27\",\n          \"2024-12-22 18:22\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"artistName\",\n      \"properties\": {\n        \"dtype\": \"string\",\n        \"num_unique_values\": 3,\n        \"samples\": [\n          \"Rema\",\n          \"La Mano 1.9\",\n          \"Kany\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"trackName\",\n      \"properties\": {\n        \"dtype\": \"string\",\n        \"num_unique_values\": 4,\n        \"samples\": [\n          \"I SAY\",\n          \"Soundgasm\",\n          \"YAYO\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"msPlayed\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 58317,\n        \"min\": 12203,\n        \"max\": 154666,\n        \"num_unique_values\": 5,\n        \"samples\": [\n          12203,\n          121080,\n          96551\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    }\n  ]\n}"
-                  }
-                },
-                "metadata": {}
-              }
-            ]
-          }
-        },
-        "06d39555a7a9462a91f3aed25d93c6f4": {
-          "model_module": "@jupyter-widgets/base",
-          "model_name": "LayoutModel",
-          "model_module_version": "1.2.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/base",
-            "_model_module_version": "1.2.0",
-            "_model_name": "LayoutModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "LayoutView",
-            "align_content": null,
-            "align_items": null,
-            "align_self": null,
-            "border": null,
-            "bottom": null,
-            "display": null,
-            "flex": null,
-            "flex_flow": null,
-            "grid_area": null,
-            "grid_auto_columns": null,
-            "grid_auto_flow": null,
-            "grid_auto_rows": null,
-            "grid_column": null,
-            "grid_gap": null,
-            "grid_row": null,
-            "grid_template_areas": null,
-            "grid_template_columns": null,
-            "grid_template_rows": null,
-            "height": null,
-            "justify_content": null,
-            "justify_items": null,
-            "left": null,
-            "margin": null,
-            "max_height": null,
-            "max_width": null,
-            "min_height": null,
-            "min_width": null,
-            "object_fit": null,
-            "object_position": null,
-            "order": null,
-            "overflow": null,
-            "overflow_x": null,
-            "overflow_y": null,
-            "padding": null,
-            "right": null,
-            "top": null,
-            "visibility": null,
-            "width": null
-          }
-        },
-        "7808e53e571d4adf9d8b76fdbe4bba98": {
-          "model_module": "@jupyter-widgets/base",
-          "model_name": "LayoutModel",
-          "model_module_version": "1.2.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/base",
-            "_model_module_version": "1.2.0",
-            "_model_name": "LayoutModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "LayoutView",
-            "align_content": null,
-            "align_items": null,
-            "align_self": null,
-            "border": null,
-            "bottom": null,
-            "display": null,
-            "flex": null,
-            "flex_flow": null,
-            "grid_area": null,
-            "grid_auto_columns": null,
-            "grid_auto_flow": null,
-            "grid_auto_rows": null,
-            "grid_column": null,
-            "grid_gap": null,
-            "grid_row": null,
-            "grid_template_areas": null,
-            "grid_template_columns": null,
-            "grid_template_rows": null,
-            "height": null,
-            "justify_content": null,
-            "justify_items": null,
-            "left": null,
-            "margin": null,
-            "max_height": null,
-            "max_width": null,
-            "min_height": null,
-            "min_width": null,
-            "object_fit": null,
-            "object_position": null,
-            "order": null,
-            "overflow": null,
-            "overflow_x": null,
-            "overflow_y": null,
-            "padding": null,
-            "right": null,
-            "top": null,
-            "visibility": null,
-            "width": null
-          }
-        },
-        "27b210cfca8f47dd8a0403aa97824807": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "DescriptionStyleModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "DescriptionStyleModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "StyleView",
-            "description_width": ""
-          }
-        },
-        "a7d65664476a48d29e49801b7277617b": {
-          "model_module": "@jupyter-widgets/base",
-          "model_name": "LayoutModel",
-          "model_module_version": "1.2.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/base",
-            "_model_module_version": "1.2.0",
-            "_model_name": "LayoutModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "LayoutView",
-            "align_content": null,
-            "align_items": null,
-            "align_self": null,
-            "border": null,
-            "bottom": null,
-            "display": null,
-            "flex": null,
-            "flex_flow": null,
-            "grid_area": null,
-            "grid_auto_columns": null,
-            "grid_auto_flow": null,
-            "grid_auto_rows": null,
-            "grid_column": null,
-            "grid_gap": null,
-            "grid_row": null,
-            "grid_template_areas": null,
-            "grid_template_columns": null,
-            "grid_template_rows": null,
-            "height": null,
-            "justify_content": null,
-            "justify_items": null,
-            "left": null,
-            "margin": null,
-            "max_height": null,
-            "max_width": null,
-            "min_height": null,
-            "min_width": null,
-            "object_fit": null,
-            "object_position": null,
-            "order": null,
-            "overflow": null,
-            "overflow_x": null,
-            "overflow_y": null,
-            "padding": null,
-            "right": null,
-            "top": null,
-            "visibility": null,
-            "width": null
-          }
-        },
-        "34492c3a9eb6431597682b5e191e888b": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "DescriptionStyleModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "DescriptionStyleModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "StyleView",
-            "description_width": "initial"
-          }
-        },
-        "1d5a299cb1ec40d695412489523d4f45": {
-          "model_module": "@jupyter-widgets/base",
-          "model_name": "LayoutModel",
-          "model_module_version": "1.2.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/base",
-            "_model_module_version": "1.2.0",
-            "_model_name": "LayoutModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "LayoutView",
-            "align_content": null,
-            "align_items": null,
-            "align_self": null,
-            "border": null,
-            "bottom": null,
-            "display": null,
-            "flex": null,
-            "flex_flow": null,
-            "grid_area": null,
-            "grid_auto_columns": null,
-            "grid_auto_flow": null,
-            "grid_auto_rows": null,
-            "grid_column": null,
-            "grid_gap": null,
-            "grid_row": null,
-            "grid_template_areas": null,
-            "grid_template_columns": null,
-            "grid_template_rows": null,
-            "height": null,
-            "justify_content": null,
-            "justify_items": null,
-            "left": null,
-            "margin": null,
-            "max_height": null,
-            "max_width": null,
-            "min_height": null,
-            "min_width": null,
-            "object_fit": null,
-            "object_position": null,
-            "order": null,
-            "overflow": null,
-            "overflow_x": null,
-            "overflow_y": null,
-            "padding": null,
-            "right": null,
-            "top": null,
-            "visibility": null,
-            "width": "400px"
-          }
-        },
-        "4fd01ca562b545a4a57d252dd22edc0d": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "DescriptionStyleModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "DescriptionStyleModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "StyleView",
-            "description_width": "initial"
-          }
-        },
-        "4df5099480fe4aacb9514f49dda7f2bb": {
-          "model_module": "@jupyter-widgets/base",
-          "model_name": "LayoutModel",
-          "model_module_version": "1.2.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/base",
-            "_model_module_version": "1.2.0",
-            "_model_name": "LayoutModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "LayoutView",
-            "align_content": null,
-            "align_items": null,
-            "align_self": null,
-            "border": null,
-            "bottom": null,
-            "display": null,
-            "flex": null,
-            "flex_flow": null,
-            "grid_area": null,
-            "grid_auto_columns": null,
-            "grid_auto_flow": null,
-            "grid_auto_rows": null,
-            "grid_column": null,
-            "grid_gap": null,
-            "grid_row": null,
-            "grid_template_areas": null,
-            "grid_template_columns": null,
-            "grid_template_rows": null,
-            "height": null,
-            "justify_content": null,
-            "justify_items": null,
-            "left": null,
-            "margin": null,
-            "max_height": null,
-            "max_width": null,
-            "min_height": null,
-            "min_width": null,
-            "object_fit": null,
-            "object_position": null,
-            "order": null,
-            "overflow": null,
-            "overflow_x": null,
-            "overflow_y": null,
-            "padding": null,
-            "right": null,
-            "top": null,
-            "visibility": null,
-            "width": null
-          }
-        },
-        "b5679d9d09f84004bd6ea5dfd1b06d26": {
-          "model_module": "@jupyter-widgets/controls",
-          "model_name": "ButtonStyleModel",
-          "model_module_version": "1.5.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/controls",
-            "_model_module_version": "1.5.0",
-            "_model_name": "ButtonStyleModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "StyleView",
-            "button_color": null,
-            "font_weight": ""
-          }
-        },
-        "5f97c35c393a413d9ed22cb959c00998": {
-          "model_module": "@jupyter-widgets/base",
-          "model_name": "LayoutModel",
-          "model_module_version": "1.2.0",
-          "state": {
-            "_model_module": "@jupyter-widgets/base",
-            "_model_module_version": "1.2.0",
-            "_model_name": "LayoutModel",
-            "_view_count": null,
-            "_view_module": "@jupyter-widgets/base",
-            "_view_module_version": "1.2.0",
-            "_view_name": "LayoutView",
-            "align_content": null,
-            "align_items": null,
-            "align_self": null,
-            "border": null,
-            "bottom": null,
-            "display": null,
-            "flex": null,
-            "flex_flow": null,
-            "grid_area": null,
-            "grid_auto_columns": null,
-            "grid_auto_flow": null,
-            "grid_auto_rows": null,
-            "grid_column": null,
-            "grid_gap": null,
-            "grid_row": null,
-            "grid_template_areas": null,
-            "grid_template_columns": null,
-            "grid_template_rows": null,
-            "height": null,
-            "justify_content": null,
-            "justify_items": null,
-            "left": null,
-            "margin": null,
-            "max_height": null,
-            "max_width": null,
-            "min_height": null,
-            "min_width": null,
-            "object_fit": null,
-            "object_position": null,
-            "order": null,
-            "overflow": null,
-            "overflow_x": null,
-            "overflow_y": null,
-            "padding": null,
-            "right": null,
-            "top": null,
-            "visibility": null,
-            "width": null
-          }
-        }
-      }
+# -*- coding: utf-8 -*-
+"""main.py
+
+Automatically generated by Colab.
+
+Original file is located at
+    https://colab.research.google.com/drive/1kIX8jR7CGhDMfYdfkeZJXbbeZ_u9ITTx
+"""
+
+#LIBRAIRIES
+!pip install spotipy
+import os
+import json
+import pandas as pd
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+
+# IMPORT DATA - Compatible Drive et Upload Local avec menu interactif
+import os
+import json
+import pandas as pd
+from google.colab import drive, files
+import ipywidgets as widgets
+from IPython.display import display, clear_output
+
+def load_spotify_files(source='drive', folder_path=None, pattern="StreamingHistory_music_"):
+    """
+    Charge les fichiers Spotify depuis Google Drive ou upload local
+
+    Args:
+        source: 'drive' ou 'upload'
+        folder_path: chemin du dossier Drive (si source='drive')
+        pattern: préfixe des fichiers à charger
+    """
+    dataframes = []
+
+    if source == 'drive':
+        # Montage de Google Drive
+        drive.mount('/content/drive')
+
+        if folder_path is None:
+            folder_path = '/content/drive/MyDrive/Spotify'
+
+        try:
+            files_list = [f for f in os.listdir(folder_path)
+                         if f.startswith(pattern) and f.endswith(".json")]
+
+            for filename in sorted(files_list):
+                file_path = os.path.join(folder_path, filename)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as file:
+                        data = json.load(file)
+                        df = pd.json_normalize(data)
+                        dataframes.append(df)
+                        print(f"✓ {filename} chargé ({len(df)} lignes)")
+                except json.JSONDecodeError as e:
+                    print(f"✗ Erreur dans {filename}: {e}")
+
+        except FileNotFoundError:
+            print(f"❌ Dossier '{folder_path}' introuvable")
+            return pd.DataFrame()
+
+    elif source == 'upload':
+        # Upload de fichiers locaux
+        print("📁 Sélectionnez vos fichiers JSON Spotify...")
+        uploaded = files.upload()
+
+        for filename in sorted(uploaded.keys()):
+            if filename.startswith(pattern) and filename.endswith(".json"):
+                try:
+                    # Écrire le fichier uploadé sur le système de fichiers Colab
+                    with open(filename, 'wb') as f:
+                        f.write(uploaded[filename])
+
+                    # Lire et parser le JSON
+                    with open(filename, 'r', encoding='utf-8') as file:
+                        data = json.load(file)
+                        df = pd.json_normalize(data)
+                        dataframes.append(df)
+                        print(f"✓ {filename} chargé ({len(df)} lignes)")
+                except json.JSONDecodeError as e:
+                    print(f"✗ Erreur dans {filename}: {e}")
+            else:
+                print(f"⚠️ {filename} ignoré (ne correspond pas au pattern)")
+
+    else:
+        print(f"❌ Source '{source}' invalide. Utilisez 'drive' ou 'upload'")
+        return pd.DataFrame()
+
+    # Combiner tous les DataFrames
+    if dataframes:
+        combined = pd.concat(dataframes, ignore_index=True)
+        print(f"\n📊 Total: {len(combined)} enregistrements")
+        return combined
+    else:
+        print("⚠️ Aucun fichier chargé")
+        return pd.DataFrame()
+
+
+# INTERFACE INTERACTIVE
+output = widgets.Output()
+streaming = None
+
+# Menu déroulant
+source_dropdown = widgets.Dropdown(
+    options=[
+        ('📁 Google Drive', 'drive'),
+        ('💾 Upload local', 'upload')
+    ],
+    value='drive',
+    description='Source :',
+    style={'description_width': 'initial'}
+)
+
+# Champ pour le chemin Drive
+path_input = widgets.Text(
+    value='/content/drive/MyDrive/Spotify',
+    description='Chemin Drive :',
+    style={'description_width': 'initial'},
+    layout=widgets.Layout(width='400px')
+)
+
+# Bouton de chargement
+load_button = widgets.Button(
+    description='📥 Charger les données',
+    button_style='success',
+    tooltip='Cliquez pour charger les fichiers',
+    icon='check'
+)
+
+# Fonction de chargement
+def on_load_button_clicked(b):
+    global streaming
+    with output:
+        clear_output()
+        source = source_dropdown.value
+
+        if source == 'drive':
+            streaming = load_spotify_files(
+                source='drive',
+                folder_path=path_input.value
+            )
+        else:
+            streaming = load_spotify_files(source='upload')
+
+        if not streaming.empty:
+            print("\n" + "="*50)
+            print("APERÇU DES DONNÉES :")
+            print("="*50)
+            display(streaming.head())
+
+load_button.on_click(on_load_button_clicked)
+
+# Affichage de l'interface
+def show_interface():
+    # Afficher ou masquer le champ path selon la source
+    def on_source_change(change):
+        if change['new'] == 'drive':
+            path_input.layout.display = 'flex'
+        else:
+            path_input.layout.display = 'none'
+
+    source_dropdown.observe(on_source_change, names='value')
+
+    # Interface
+    interface = widgets.VBox([
+        widgets.HTML("<h3>🎵 Chargement des données Spotify</h3>"),
+        source_dropdown,
+        path_input,
+        load_button,
+        output
+    ])
+
+    display(interface)
+
+# Lancer l'interface
+show_interface()
+
+#CLEAN AND PREPA DATA
+#Le but est de sélectionner des données pertinentes, à savoir des données concernant l'année 2025 uniquement,
+#des musiques que j'ai réellement écouter donc les musiques zappées ne seront pas utilisées
+#et essayer de nettoyer au mieux les musiques du type lofi/white noise/rain
+
+#convert to datetime format
+streaming["endTime"] = pd.to_datetime(streaming["endTime"])
+
+#filter for only 2025
+streaming_2025_df = streaming[streaming["endTime"].dt.year == 2025]
+
+# Définir le seuil (ajustez selon votre analyse)
+threshold = 15  # en secondes
+
+# Calculer la durée en secondes si pas déjà fait
+streaming['seconds_played'] = streaming_2025_df['msPlayed'] / 1000
+
+# Filtrer : garder seulement les écoutes >= seuil
+streaming = streaming_2025_df[streaming['seconds_played'] >= threshold].copy()
+
+print(f"✓ Écoutes de moins de {threshold}s supprimées")
+print(f"📊 {len(streaming)} écoutes restantes")
+###########################################
+
+# Détecter les potentiels sons d'ambiance
+keywords_to_check = [
+    'rain', 'thunder', 'storm', 'ocean', 'wave', 'water', 'river', 'stream',
+    'nature', 'forest', 'bird', 'wind', 'fire', 'crackling',
+    'white noise', 'pink noise', 'brown noise', 'ambient noise',
+    'asmr', 'binaural', 'meditation', 'relaxation', 'calm', 'peace',
+    'yoga', 'zen', 'chakra', 'mindfulness', 'sleep', 'sleeping',
+    'healing', 'therapy', 'spa', 'massage',
+    'lofi', 'lo-fi', 'lo fi', 'chill beats', 'study beats',
+    'frequency', 'hz', 'hertz', 'tone', 'soundscape'
+]
+
+def detect_ambient(row):
+    text = f"{row.get('trackName', '')} {row.get('artistName', '')}".lower()
+    return any(keyword in text for keyword in keywords_to_check)
+
+# Marquer les suspects
+streaming['is_suspect'] = streaming.apply(detect_ambient, axis=1)
+
+# Créer la liste des suspects avec leurs stats
+suspects = streaming[streaming['is_suspect']].groupby(['trackName', 'artistName']).agg({
+    'msPlayed': ['count', 'sum']
+}).reset_index()
+
+suspects.columns = ['trackName', 'artistName', 'nb_ecoutes', 'temps_total_ms']
+suspects['temps_total_min'] = suspects['temps_total_ms'] / 60000
+suspects = suspects.sort_values('nb_ecoutes', ascending=False)
+
+print(f"🔍 {len(suspects)} pistes suspectes détectées\n")
+print("="*80)
+display(suspects)
+
+# Créer un fichier CSV pour faciliter la sélection
+suspects.to_csv('/content/drive/MyDrive/Spotify/suspects_to_review.csv', index=False)
+print("\n💾 Liste exportée dans: suspects_to_review.csv")
+print("📝 Instructions:")
+print("   1. Ouvrez le fichier CSV")
+print("   2. Ajoutez une colonne 'supprimer' avec 'oui' ou 'non'")
+print("   3. Sauvegardez et réexécutez la cellule suivante")
+
+# Charger vos choix
+choix = pd.read_csv('/content/drive/MyDrive/Spotify/suspects_to_review1.csv')
+
+# Vérifier si la colonne existe
+if 'supprimer' not in choix.columns:
+    print("❌ Ajoutez d'abord une colonne 'supprimer' dans le CSV avec 'oui' ou 'non'")
+else:
+    # Filtrer ce qui doit être supprimé
+    to_remove = choix[choix['supprimer'].str.lower() == 'oui'][['trackName', 'artistName']]
+
+    print(f"🗑️ {len(to_remove)} pistes uniques à supprimer:")
+    display(to_remove)
+
+    # Créer un identifiant unique pour matcher
+    streaming['track_id'] = streaming['trackName'] + '|||' + streaming['artistName']
+    to_remove['track_id'] = to_remove['trackName'] + '|||' + to_remove['artistName']
+
+    # Supprimer
+    before = len(streaming)
+    streaming = streaming[~streaming['track_id'].isin(to_remove['track_id'])].copy()
+    after = len(streaming)
+
+    # Nettoyer
+    streaming.drop(['is_suspect', 'track_id'], axis=1, inplace=True)
+
+    print(f"\n✅ Suppression effectuée:")
+    print(f"   Avant: {before} écoutes")
+    print(f"   Après: {after} écoutes")
+    print(f"   Supprimées: {before - after} écoutes")
+
+#STATISTIQUES TEMPORELLES
+#Temps total d'écoute en 2025
+total_time_listening = streaming.msPlayed.sum() / 3600000
+print(total_time_listening)
+
+#Plage temporelle de l'ensemble de données
+streaming.endTime.min(), streaming.endTime.max()
+
+#moyenne de ms jouées chaque jour au cours de l'année (jusqu'au 05/12)
+year_ms = streaming.msPlayed.sum() / (pd.Timestamp(streaming.endTime.max()) - pd.Timestamp(streaming.endTime.min())).days
+
+#minutes par jour
+avg_mins_day = year_ms / 60000
+
+#heures par jour
+avg_hours_day = year_ms / 3600000
+print(avg_hours_day)
+
+#Regardez les écoutes mensuelles
+streaming['month'] = streaming['endTime'].dt.month # Create 'month' column
+monthly_listening = streaming.groupby("month")["msPlayed"].sum().reset_index()
+monthly_listening["hours_listened"] =  monthly_listening["msPlayed"] / 3600000
+monthly_listening.sort_values("hours_listened", ascending=False)
+
+#ajouter une heure de la journée
+streaming['hour'] = streaming.endTime.dt.hour
+
+#définir des plages horaires pour l'écoute horaire
+def time_bucket(hour):
+    if 3 <= hour < 11:
+        return 'Morning'
+    elif 11 <= hour < 18:
+        return 'Afternoon'
+    else:
+        return 'Night'
+
+#fonction d'application
+streaming['time_bucket'] = streaming['hour'].apply(time_bucket)
+
+#résultats agrégés pour analyser l'heure d'écoute
+daily_listening = streaming.groupby("time_bucket")["msPlayed"].sum().reset_index()
+daily_listening["hours_listened"] =  daily_listening["msPlayed"] / 3600000
+daily_listening.sort_values("hours_listened", ascending=False)
+daily_listening["percentage of time over year listening"] = (daily_listening["hours_listened"]/total_time_listening)*100
+
+#Regardez l'écoute horaire
+hour_listening = streaming.groupby("hour")["msPlayed"].sum().reset_index()
+hour_listening["hours_listened"] =  hour_listening["msPlayed"] / 3600000
+hour_listening.sort_values("hours_listened", ascending=False)
+
+# Récupérer les durées des chansons et les genres
+#CODE QUI MARCHE !!!!!!!!!!!!!!!!
+# Utilisation de lastfm API
+
+import requests
+import time
+import pandas as pd
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+
+LASTFM_API_KEY = '83100e2042c7a645ac9b98747ec29b76'
+
+def get_artist_genres_lastfm(artist_name):
+    """Récupère les genres d'un artiste via Last.fm API"""
+    url = "http://ws.audioscrobbler.com/2.0/"
+    params = {
+        'method': 'artist.gettoptags',
+        'artist': artist_name,
+        'api_key': LASTFM_API_KEY,
+        'format': 'json'
     }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/lmmddb/Spotify-Wrapped-/blob/main/main_py.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": 9,
-      "metadata": {
-        "id": "_1MSl9d1onWM",
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "outputId": "970734c1-c9f9-414f-940d-35b430652f95"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Collecting spotipy\n",
-            "  Downloading spotipy-2.25.2-py3-none-any.whl.metadata (5.1 kB)\n",
-            "Collecting redis>=3.5.3 (from spotipy)\n",
-            "  Downloading redis-7.1.0-py3-none-any.whl.metadata (12 kB)\n",
-            "Requirement already satisfied: requests>=2.25.0 in /usr/local/lib/python3.12/dist-packages (from spotipy) (2.32.4)\n",
-            "Requirement already satisfied: urllib3>=1.26.0 in /usr/local/lib/python3.12/dist-packages (from spotipy) (2.5.0)\n",
-            "Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests>=2.25.0->spotipy) (3.4.4)\n",
-            "Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests>=2.25.0->spotipy) (3.11)\n",
-            "Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests>=2.25.0->spotipy) (2025.11.12)\n",
-            "Downloading spotipy-2.25.2-py3-none-any.whl (31 kB)\n",
-            "Downloading redis-7.1.0-py3-none-any.whl (354 kB)\n",
-            "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m354.2/354.2 kB\u001b[0m \u001b[31m21.6 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
-            "\u001b[?25hInstalling collected packages: redis, spotipy\n",
-            "Successfully installed redis-7.1.0 spotipy-2.25.2\n"
-          ]
-        }
-      ],
-      "source": [
-        "#LIBRAIRIES\n",
-        "!pip install spotipy\n",
-        "import os\n",
-        "import json\n",
-        "import pandas as pd\n",
-        "import spotipy\n",
-        "from spotipy.oauth2 import SpotifyClientCredentials"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "# IMPORT DATA - Compatible Drive et Upload Local avec menu interactif\n",
-        "import os\n",
-        "import json\n",
-        "import pandas as pd\n",
-        "from google.colab import drive, files\n",
-        "import ipywidgets as widgets\n",
-        "from IPython.display import display, clear_output\n",
-        "\n",
-        "def load_spotify_files(source='drive', folder_path=None, pattern=\"StreamingHistory_music_\"):\n",
-        "    \"\"\"\n",
-        "    Charge les fichiers Spotify depuis Google Drive ou upload local\n",
-        "\n",
-        "    Args:\n",
-        "        source: 'drive' ou 'upload'\n",
-        "        folder_path: chemin du dossier Drive (si source='drive')\n",
-        "        pattern: préfixe des fichiers à charger\n",
-        "    \"\"\"\n",
-        "    dataframes = []\n",
-        "\n",
-        "    if source == 'drive':\n",
-        "        # Montage de Google Drive\n",
-        "        drive.mount('/content/drive')\n",
-        "\n",
-        "        if folder_path is None:\n",
-        "            folder_path = '/content/drive/MyDrive/Spotify'\n",
-        "\n",
-        "        try:\n",
-        "            files_list = [f for f in os.listdir(folder_path)\n",
-        "                         if f.startswith(pattern) and f.endswith(\".json\")]\n",
-        "\n",
-        "            for filename in sorted(files_list):\n",
-        "                file_path = os.path.join(folder_path, filename)\n",
-        "                try:\n",
-        "                    with open(file_path, 'r', encoding='utf-8') as file:\n",
-        "                        data = json.load(file)\n",
-        "                        df = pd.json_normalize(data)\n",
-        "                        dataframes.append(df)\n",
-        "                        print(f\"✓ {filename} chargé ({len(df)} lignes)\")\n",
-        "                except json.JSONDecodeError as e:\n",
-        "                    print(f\"✗ Erreur dans {filename}: {e}\")\n",
-        "\n",
-        "        except FileNotFoundError:\n",
-        "            print(f\"❌ Dossier '{folder_path}' introuvable\")\n",
-        "            return pd.DataFrame()\n",
-        "\n",
-        "    elif source == 'upload':\n",
-        "        # Upload de fichiers locaux\n",
-        "        print(\"📁 Sélectionnez vos fichiers JSON Spotify...\")\n",
-        "        uploaded = files.upload()\n",
-        "\n",
-        "        for filename in sorted(uploaded.keys()):\n",
-        "            if filename.startswith(pattern) and filename.endswith(\".json\"):\n",
-        "                try:\n",
-        "                    # Écrire le fichier uploadé sur le système de fichiers Colab\n",
-        "                    with open(filename, 'wb') as f:\n",
-        "                        f.write(uploaded[filename])\n",
-        "\n",
-        "                    # Lire et parser le JSON\n",
-        "                    with open(filename, 'r', encoding='utf-8') as file:\n",
-        "                        data = json.load(file)\n",
-        "                        df = pd.json_normalize(data)\n",
-        "                        dataframes.append(df)\n",
-        "                        print(f\"✓ {filename} chargé ({len(df)} lignes)\")\n",
-        "                except json.JSONDecodeError as e:\n",
-        "                    print(f\"✗ Erreur dans {filename}: {e}\")\n",
-        "            else:\n",
-        "                print(f\"⚠️ {filename} ignoré (ne correspond pas au pattern)\")\n",
-        "\n",
-        "    else:\n",
-        "        print(f\"❌ Source '{source}' invalide. Utilisez 'drive' ou 'upload'\")\n",
-        "        return pd.DataFrame()\n",
-        "\n",
-        "    # Combiner tous les DataFrames\n",
-        "    if dataframes:\n",
-        "        combined = pd.concat(dataframes, ignore_index=True)\n",
-        "        print(f\"\\n📊 Total: {len(combined)} enregistrements\")\n",
-        "        return combined\n",
-        "    else:\n",
-        "        print(\"⚠️ Aucun fichier chargé\")\n",
-        "        return pd.DataFrame()\n",
-        "\n",
-        "\n",
-        "# INTERFACE INTERACTIVE\n",
-        "output = widgets.Output()\n",
-        "streaming = None\n",
-        "\n",
-        "# Menu déroulant\n",
-        "source_dropdown = widgets.Dropdown(\n",
-        "    options=[\n",
-        "        ('📁 Google Drive', 'drive'),\n",
-        "        ('💾 Upload local', 'upload')\n",
-        "    ],\n",
-        "    value='drive',\n",
-        "    description='Source :',\n",
-        "    style={'description_width': 'initial'}\n",
-        ")\n",
-        "\n",
-        "# Champ pour le chemin Drive\n",
-        "path_input = widgets.Text(\n",
-        "    value='/content/drive/MyDrive/Spotify',\n",
-        "    description='Chemin Drive :',\n",
-        "    style={'description_width': 'initial'},\n",
-        "    layout=widgets.Layout(width='400px')\n",
-        ")\n",
-        "\n",
-        "# Bouton de chargement\n",
-        "load_button = widgets.Button(\n",
-        "    description='📥 Charger les données',\n",
-        "    button_style='success',\n",
-        "    tooltip='Cliquez pour charger les fichiers',\n",
-        "    icon='check'\n",
-        ")\n",
-        "\n",
-        "# Fonction de chargement\n",
-        "def on_load_button_clicked(b):\n",
-        "    global streaming\n",
-        "    with output:\n",
-        "        clear_output()\n",
-        "        source = source_dropdown.value\n",
-        "\n",
-        "        if source == 'drive':\n",
-        "            streaming = load_spotify_files(\n",
-        "                source='drive',\n",
-        "                folder_path=path_input.value\n",
-        "            )\n",
-        "        else:\n",
-        "            streaming = load_spotify_files(source='upload')\n",
-        "\n",
-        "        if not streaming.empty:\n",
-        "            print(\"\\n\" + \"=\"*50)\n",
-        "            print(\"APERÇU DES DONNÉES :\")\n",
-        "            print(\"=\"*50)\n",
-        "            display(streaming.head())\n",
-        "\n",
-        "load_button.on_click(on_load_button_clicked)\n",
-        "\n",
-        "# Affichage de l'interface\n",
-        "def show_interface():\n",
-        "    # Afficher ou masquer le champ path selon la source\n",
-        "    def on_source_change(change):\n",
-        "        if change['new'] == 'drive':\n",
-        "            path_input.layout.display = 'flex'\n",
-        "        else:\n",
-        "            path_input.layout.display = 'none'\n",
-        "\n",
-        "    source_dropdown.observe(on_source_change, names='value')\n",
-        "\n",
-        "    # Interface\n",
-        "    interface = widgets.VBox([\n",
-        "        widgets.HTML(\"<h3>🎵 Chargement des données Spotify</h3>\"),\n",
-        "        source_dropdown,\n",
-        "        path_input,\n",
-        "        load_button,\n",
-        "        output\n",
-        "    ])\n",
-        "\n",
-        "    display(interface)\n",
-        "\n",
-        "# Lancer l'interface\n",
-        "show_interface()"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 544,
-          "referenced_widgets": [
-            "db5712fa39034f30b4f38cacb19341e8",
-            "ad7bc3d6c21841a48636f5d0999e46a3",
-            "1f41e32f244041f8852de039a6717c50",
-            "cffa9c6f39144c658e8ede876eca437e",
-            "09c05df5b660452e9aa64ab9fc1808db",
-            "991479ea60c24ab59710101b979e06d3",
-            "06d39555a7a9462a91f3aed25d93c6f4",
-            "7808e53e571d4adf9d8b76fdbe4bba98",
-            "27b210cfca8f47dd8a0403aa97824807",
-            "a7d65664476a48d29e49801b7277617b",
-            "34492c3a9eb6431597682b5e191e888b",
-            "1d5a299cb1ec40d695412489523d4f45",
-            "4fd01ca562b545a4a57d252dd22edc0d",
-            "4df5099480fe4aacb9514f49dda7f2bb",
-            "b5679d9d09f84004bd6ea5dfd1b06d26",
-            "5f97c35c393a413d9ed22cb959c00998"
-          ]
-        },
-        "id": "dYWU3a9hBvs7",
-        "outputId": "fa92a3a7-aa04-4258-dc96-504694210d65"
-      },
-      "execution_count": 10,
-      "outputs": [
-        {
-          "output_type": "display_data",
-          "data": {
-            "text/plain": [
-              "VBox(children=(HTML(value='<h3>🎵 Chargement des données Spotify</h3>'), Dropdown(description='Source :', optio…"
-            ],
-            "application/vnd.jupyter.widget-view+json": {
-              "version_major": 2,
-              "version_minor": 0,
-              "model_id": "db5712fa39034f30b4f38cacb19341e8"
-            }
-          },
-          "metadata": {}
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "#CLEAN AND PREPA DATA\n",
-        "#Le but est de sélectionner des données pertinentes, à savoir des données concernant l'année 2025 uniquement,\n",
-        "#des musiques que j'ai réellement écouter donc les musiques zappées ne seront pas utilisées\n",
-        "#et essayer de nettoyer au mieux les musiques du type lofi/white noise/rain\n",
-        "\n",
-        "#convert to datetime format\n",
-        "streaming[\"endTime\"] = pd.to_datetime(streaming[\"endTime\"])\n",
-        "\n",
-        "#filter for only 2025\n",
-        "streaming_2025_df = streaming[streaming[\"endTime\"].dt.year == 2025]\n",
-        "\n",
-        "# Définir le seuil (ajustez selon votre analyse)\n",
-        "threshold = 15  # en secondes\n",
-        "\n",
-        "# Calculer la durée en secondes si pas déjà fait\n",
-        "streaming['seconds_played'] = streaming_2025_df['msPlayed'] / 1000\n",
-        "\n",
-        "# Filtrer : garder seulement les écoutes >= seuil\n",
-        "streaming = streaming_2025_df[streaming['seconds_played'] >= threshold].copy()\n",
-        "\n",
-        "print(f\"✓ Écoutes de moins de {threshold}s supprimées\")\n",
-        "print(f\"📊 {len(streaming)} écoutes restantes\")\n",
-        "###########################################\n"
-      ],
-      "metadata": {
-        "id": "f9lOdvF5DY4I",
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "outputId": "810e9a27-042c-4b46-a8b5-c8636d589cbc"
-      },
-      "execution_count": 12,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "✓ Écoutes de moins de 15s supprimées\n",
-            "📊 22127 écoutes restantes\n"
-          ]
-        },
-        {
-          "output_type": "stream",
-          "name": "stderr",
-          "text": [
-            "/tmp/ipython-input-1990335975.py:19: UserWarning: Boolean Series key will be reindexed to match DataFrame index.\n",
-            "  streaming = streaming_2025_df[streaming['seconds_played'] >= threshold].copy()\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "# Détecter les potentiels sons d'ambiance\n",
-        "keywords_to_check = [\n",
-        "    'rain', 'thunder', 'storm', 'ocean', 'wave', 'water', 'river', 'stream',\n",
-        "    'nature', 'forest', 'bird', 'wind', 'fire', 'crackling',\n",
-        "    'white noise', 'pink noise', 'brown noise', 'ambient noise',\n",
-        "    'asmr', 'binaural', 'meditation', 'relaxation', 'calm', 'peace',\n",
-        "    'yoga', 'zen', 'chakra', 'mindfulness', 'sleep', 'sleeping',\n",
-        "    'healing', 'therapy', 'spa', 'massage',\n",
-        "    'lofi', 'lo-fi', 'lo fi', 'chill beats', 'study beats',\n",
-        "    'frequency', 'hz', 'hertz', 'tone', 'soundscape'\n",
-        "]\n",
-        "\n",
-        "def detect_ambient(row):\n",
-        "    text = f\"{row.get('trackName', '')} {row.get('artistName', '')}\".lower()\n",
-        "    return any(keyword in text for keyword in keywords_to_check)\n",
-        "\n",
-        "# Marquer les suspects\n",
-        "streaming['is_suspect'] = streaming.apply(detect_ambient, axis=1)\n",
-        "\n",
-        "# Créer la liste des suspects avec leurs stats\n",
-        "suspects = streaming[streaming['is_suspect']].groupby(['trackName', 'artistName']).agg({\n",
-        "    'msPlayed': ['count', 'sum']\n",
-        "}).reset_index()\n",
-        "\n",
-        "suspects.columns = ['trackName', 'artistName', 'nb_ecoutes', 'temps_total_ms']\n",
-        "suspects['temps_total_min'] = suspects['temps_total_ms'] / 60000\n",
-        "suspects = suspects.sort_values('nb_ecoutes', ascending=False)\n",
-        "\n",
-        "print(f\"🔍 {len(suspects)} pistes suspectes détectées\\n\")\n",
-        "print(\"=\"*80)\n",
-        "display(suspects)\n",
-        "\n",
-        "# Créer un fichier CSV pour faciliter la sélection\n",
-        "suspects.to_csv('/content/drive/MyDrive/Spotify/suspects_to_review.csv', index=False)\n",
-        "print(\"\\n💾 Liste exportée dans: suspects_to_review.csv\")\n",
-        "print(\"📝 Instructions:\")\n",
-        "print(\"   1. Ouvrez le fichier CSV\")\n",
-        "print(\"   2. Ajoutez une colonne 'supprimer' avec 'oui' ou 'non'\")\n",
-        "print(\"   3. Sauvegardez et réexécutez la cellule suivante\")"
-      ],
-      "metadata": {
-        "id": "w4P2ywISMjYX",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 580
-        },
-        "outputId": "6b2db4c5-310c-461d-e128-a1bb224bcfd3"
-      },
-      "execution_count": 13,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "🔍 400 pistes suspectes détectées\n",
-            "\n",
-            "================================================================================\n"
-          ]
-        },
-        {
-          "output_type": "display_data",
-          "data": {
-            "text/plain": [
-              "                      trackName         artistName  nb_ecoutes  \\\n",
-              "38     Black Noise Thunderstorm  MKG Sound Library         426   \n",
-              "178      Deep Sleep Brown Noise       Bits & Noise         213   \n",
-              "66           Brown Noise Dreams    Focus Frequency         167   \n",
-              "81     Brown Noise Intelligence               BBVB          64   \n",
-              "36    Big Waterfall Brown Noise            Fortuna          41   \n",
-              "..                          ...                ...         ...   \n",
-              "371                Training Day             DA Uzi           1   \n",
-              "373  Troubled Waters / Homesick            OG DAYV           1   \n",
-              "375        Under the Bodhi Tree         Native Zen           1   \n",
-              "378                       Water               Tyla           1   \n",
-              "383       Waves of Brown Part 2             Caalyx           1   \n",
-              "\n",
-              "     temps_total_ms  temps_total_min  \n",
-              "38         64681452      1078.024200  \n",
-              "178        34725589       578.759817  \n",
-              "66         24349139       405.818983  \n",
-              "81         11985258       199.754300  \n",
-              "36          5891374        98.189567  \n",
-              "..              ...              ...  \n",
-              "371          159423         2.657050  \n",
-              "373           18576         0.309600  \n",
-              "375          119693         1.994883  \n",
-              "378           98746         1.645767  \n",
-              "383          181500         3.025000  \n",
-              "\n",
-              "[400 rows x 5 columns]"
-            ],
-            "text/html": [
-              "\n",
-              "  <div id=\"df-12694442-0335-46b0-bfc9-f49c66b83a61\" class=\"colab-df-container\">\n",
-              "    <div>\n",
-              "<style scoped>\n",
-              "    .dataframe tbody tr th:only-of-type {\n",
-              "        vertical-align: middle;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe tbody tr th {\n",
-              "        vertical-align: top;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe thead th {\n",
-              "        text-align: right;\n",
-              "    }\n",
-              "</style>\n",
-              "<table border=\"1\" class=\"dataframe\">\n",
-              "  <thead>\n",
-              "    <tr style=\"text-align: right;\">\n",
-              "      <th></th>\n",
-              "      <th>trackName</th>\n",
-              "      <th>artistName</th>\n",
-              "      <th>nb_ecoutes</th>\n",
-              "      <th>temps_total_ms</th>\n",
-              "      <th>temps_total_min</th>\n",
-              "    </tr>\n",
-              "  </thead>\n",
-              "  <tbody>\n",
-              "    <tr>\n",
-              "      <th>38</th>\n",
-              "      <td>Black Noise Thunderstorm</td>\n",
-              "      <td>MKG Sound Library</td>\n",
-              "      <td>426</td>\n",
-              "      <td>64681452</td>\n",
-              "      <td>1078.024200</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>178</th>\n",
-              "      <td>Deep Sleep Brown Noise</td>\n",
-              "      <td>Bits &amp; Noise</td>\n",
-              "      <td>213</td>\n",
-              "      <td>34725589</td>\n",
-              "      <td>578.759817</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>66</th>\n",
-              "      <td>Brown Noise Dreams</td>\n",
-              "      <td>Focus Frequency</td>\n",
-              "      <td>167</td>\n",
-              "      <td>24349139</td>\n",
-              "      <td>405.818983</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>81</th>\n",
-              "      <td>Brown Noise Intelligence</td>\n",
-              "      <td>BBVB</td>\n",
-              "      <td>64</td>\n",
-              "      <td>11985258</td>\n",
-              "      <td>199.754300</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>36</th>\n",
-              "      <td>Big Waterfall Brown Noise</td>\n",
-              "      <td>Fortuna</td>\n",
-              "      <td>41</td>\n",
-              "      <td>5891374</td>\n",
-              "      <td>98.189567</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>...</th>\n",
-              "      <td>...</td>\n",
-              "      <td>...</td>\n",
-              "      <td>...</td>\n",
-              "      <td>...</td>\n",
-              "      <td>...</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>371</th>\n",
-              "      <td>Training Day</td>\n",
-              "      <td>DA Uzi</td>\n",
-              "      <td>1</td>\n",
-              "      <td>159423</td>\n",
-              "      <td>2.657050</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>373</th>\n",
-              "      <td>Troubled Waters / Homesick</td>\n",
-              "      <td>OG DAYV</td>\n",
-              "      <td>1</td>\n",
-              "      <td>18576</td>\n",
-              "      <td>0.309600</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>375</th>\n",
-              "      <td>Under the Bodhi Tree</td>\n",
-              "      <td>Native Zen</td>\n",
-              "      <td>1</td>\n",
-              "      <td>119693</td>\n",
-              "      <td>1.994883</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>378</th>\n",
-              "      <td>Water</td>\n",
-              "      <td>Tyla</td>\n",
-              "      <td>1</td>\n",
-              "      <td>98746</td>\n",
-              "      <td>1.645767</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>383</th>\n",
-              "      <td>Waves of Brown Part 2</td>\n",
-              "      <td>Caalyx</td>\n",
-              "      <td>1</td>\n",
-              "      <td>181500</td>\n",
-              "      <td>3.025000</td>\n",
-              "    </tr>\n",
-              "  </tbody>\n",
-              "</table>\n",
-              "<p>400 rows × 5 columns</p>\n",
-              "</div>\n",
-              "    <div class=\"colab-df-buttons\">\n",
-              "\n",
-              "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-12694442-0335-46b0-bfc9-f49c66b83a61')\"\n",
-              "            title=\"Convert this dataframe to an interactive table.\"\n",
-              "            style=\"display:none;\">\n",
-              "\n",
-              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
-              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
-              "  </svg>\n",
-              "    </button>\n",
-              "\n",
-              "  <style>\n",
-              "    .colab-df-container {\n",
-              "      display:flex;\n",
-              "      gap: 12px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert {\n",
-              "      background-color: #E8F0FE;\n",
-              "      border: none;\n",
-              "      border-radius: 50%;\n",
-              "      cursor: pointer;\n",
-              "      display: none;\n",
-              "      fill: #1967D2;\n",
-              "      height: 32px;\n",
-              "      padding: 0 0 0 0;\n",
-              "      width: 32px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert:hover {\n",
-              "      background-color: #E2EBFA;\n",
-              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "      fill: #174EA6;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-buttons div {\n",
-              "      margin-bottom: 4px;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert {\n",
-              "      background-color: #3B4455;\n",
-              "      fill: #D2E3FC;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert:hover {\n",
-              "      background-color: #434B5C;\n",
-              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
-              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
-              "      fill: #FFFFFF;\n",
-              "    }\n",
-              "  </style>\n",
-              "\n",
-              "    <script>\n",
-              "      const buttonEl =\n",
-              "        document.querySelector('#df-12694442-0335-46b0-bfc9-f49c66b83a61 button.colab-df-convert');\n",
-              "      buttonEl.style.display =\n",
-              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "\n",
-              "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-12694442-0335-46b0-bfc9-f49c66b83a61');\n",
-              "        const dataTable =\n",
-              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
-              "                                                    [key], {});\n",
-              "        if (!dataTable) return;\n",
-              "\n",
-              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
-              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
-              "          + ' to learn more about interactive tables.';\n",
-              "        element.innerHTML = '';\n",
-              "        dataTable['output_type'] = 'display_data';\n",
-              "        await google.colab.output.renderOutput(dataTable, element);\n",
-              "        const docLink = document.createElement('div');\n",
-              "        docLink.innerHTML = docLinkHtml;\n",
-              "        element.appendChild(docLink);\n",
-              "      }\n",
-              "    </script>\n",
-              "  </div>\n",
-              "\n",
-              "\n",
-              "    <div id=\"df-4b6783e9-2d73-4570-8fd0-c9eea9c0d4f7\">\n",
-              "      <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-4b6783e9-2d73-4570-8fd0-c9eea9c0d4f7')\"\n",
-              "                title=\"Suggest charts\"\n",
-              "                style=\"display:none;\">\n",
-              "\n",
-              "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
-              "     width=\"24px\">\n",
-              "    <g>\n",
-              "        <path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z\"/>\n",
-              "    </g>\n",
-              "</svg>\n",
-              "      </button>\n",
-              "\n",
-              "<style>\n",
-              "  .colab-df-quickchart {\n",
-              "      --bg-color: #E8F0FE;\n",
-              "      --fill-color: #1967D2;\n",
-              "      --hover-bg-color: #E2EBFA;\n",
-              "      --hover-fill-color: #174EA6;\n",
-              "      --disabled-fill-color: #AAA;\n",
-              "      --disabled-bg-color: #DDD;\n",
-              "  }\n",
-              "\n",
-              "  [theme=dark] .colab-df-quickchart {\n",
-              "      --bg-color: #3B4455;\n",
-              "      --fill-color: #D2E3FC;\n",
-              "      --hover-bg-color: #434B5C;\n",
-              "      --hover-fill-color: #FFFFFF;\n",
-              "      --disabled-bg-color: #3B4455;\n",
-              "      --disabled-fill-color: #666;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart {\n",
-              "    background-color: var(--bg-color);\n",
-              "    border: none;\n",
-              "    border-radius: 50%;\n",
-              "    cursor: pointer;\n",
-              "    display: none;\n",
-              "    fill: var(--fill-color);\n",
-              "    height: 32px;\n",
-              "    padding: 0;\n",
-              "    width: 32px;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart:hover {\n",
-              "    background-color: var(--hover-bg-color);\n",
-              "    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "    fill: var(--button-hover-fill-color);\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart-complete:disabled,\n",
-              "  .colab-df-quickchart-complete:disabled:hover {\n",
-              "    background-color: var(--disabled-bg-color);\n",
-              "    fill: var(--disabled-fill-color);\n",
-              "    box-shadow: none;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-spinner {\n",
-              "    border: 2px solid var(--fill-color);\n",
-              "    border-color: transparent;\n",
-              "    border-bottom-color: var(--fill-color);\n",
-              "    animation:\n",
-              "      spin 1s steps(1) infinite;\n",
-              "  }\n",
-              "\n",
-              "  @keyframes spin {\n",
-              "    0% {\n",
-              "      border-color: transparent;\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "      border-left-color: var(--fill-color);\n",
-              "    }\n",
-              "    20% {\n",
-              "      border-color: transparent;\n",
-              "      border-left-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "    }\n",
-              "    30% {\n",
-              "      border-color: transparent;\n",
-              "      border-left-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "      border-right-color: var(--fill-color);\n",
-              "    }\n",
-              "    40% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "    }\n",
-              "    60% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "    }\n",
-              "    80% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "    }\n",
-              "    90% {\n",
-              "      border-color: transparent;\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "    }\n",
-              "  }\n",
-              "</style>\n",
-              "\n",
-              "      <script>\n",
-              "        async function quickchart(key) {\n",
-              "          const quickchartButtonEl =\n",
-              "            document.querySelector('#' + key + ' button');\n",
-              "          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.\n",
-              "          quickchartButtonEl.classList.add('colab-df-spinner');\n",
-              "          try {\n",
-              "            const charts = await google.colab.kernel.invokeFunction(\n",
-              "                'suggestCharts', [key], {});\n",
-              "          } catch (error) {\n",
-              "            console.error('Error during call to suggestCharts:', error);\n",
-              "          }\n",
-              "          quickchartButtonEl.classList.remove('colab-df-spinner');\n",
-              "          quickchartButtonEl.classList.add('colab-df-quickchart-complete');\n",
-              "        }\n",
-              "        (() => {\n",
-              "          let quickchartButtonEl =\n",
-              "            document.querySelector('#df-4b6783e9-2d73-4570-8fd0-c9eea9c0d4f7 button');\n",
-              "          quickchartButtonEl.style.display =\n",
-              "            google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "        })();\n",
-              "      </script>\n",
-              "    </div>\n",
-              "\n",
-              "  <div id=\"id_d3a4f4af-21e1-4f8d-b8bf-e40b3911e4e7\">\n",
-              "    <style>\n",
-              "      .colab-df-generate {\n",
-              "        background-color: #E8F0FE;\n",
-              "        border: none;\n",
-              "        border-radius: 50%;\n",
-              "        cursor: pointer;\n",
-              "        display: none;\n",
-              "        fill: #1967D2;\n",
-              "        height: 32px;\n",
-              "        padding: 0 0 0 0;\n",
-              "        width: 32px;\n",
-              "      }\n",
-              "\n",
-              "      .colab-df-generate:hover {\n",
-              "        background-color: #E2EBFA;\n",
-              "        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "        fill: #174EA6;\n",
-              "      }\n",
-              "\n",
-              "      [theme=dark] .colab-df-generate {\n",
-              "        background-color: #3B4455;\n",
-              "        fill: #D2E3FC;\n",
-              "      }\n",
-              "\n",
-              "      [theme=dark] .colab-df-generate:hover {\n",
-              "        background-color: #434B5C;\n",
-              "        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
-              "        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
-              "        fill: #FFFFFF;\n",
-              "      }\n",
-              "    </style>\n",
-              "    <button class=\"colab-df-generate\" onclick=\"generateWithVariable('suspects')\"\n",
-              "            title=\"Generate code using this dataframe.\"\n",
-              "            style=\"display:none;\">\n",
-              "\n",
-              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
-              "       width=\"24px\">\n",
-              "    <path d=\"M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z\"/>\n",
-              "  </svg>\n",
-              "    </button>\n",
-              "    <script>\n",
-              "      (() => {\n",
-              "      const buttonEl =\n",
-              "        document.querySelector('#id_d3a4f4af-21e1-4f8d-b8bf-e40b3911e4e7 button.colab-df-generate');\n",
-              "      buttonEl.style.display =\n",
-              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "\n",
-              "      buttonEl.onclick = () => {\n",
-              "        google.colab.notebook.generateWithVariable('suspects');\n",
-              "      }\n",
-              "      })();\n",
-              "    </script>\n",
-              "  </div>\n",
-              "\n",
-              "    </div>\n",
-              "  </div>\n"
-            ],
-            "application/vnd.google.colaboratory.intrinsic+json": {
-              "type": "dataframe",
-              "variable_name": "suspects",
-              "summary": "{\n  \"name\": \"suspects\",\n  \"rows\": 400,\n  \"fields\": [\n    {\n      \"column\": \"trackName\",\n      \"properties\": {\n        \"dtype\": \"string\",\n        \"num_unique_values\": 391,\n        \"samples\": [\n          \"Brown Noise Sounds\",\n          \"Good Night Brown Noise\",\n          \"Brown Noise Siesta\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"artistName\",\n      \"properties\": {\n        \"dtype\": \"string\",\n        \"num_unique_values\": 275,\n        \"samples\": [\n          \"A Dreaming Machine\",\n          \"One Zero 8\",\n          \"FloatSpace\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"nb_ecoutes\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 25,\n        \"min\": 1,\n        \"max\": 426,\n        \"num_unique_values\": 21,\n        \"samples\": [\n          426,\n          4,\n          6\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"temps_total_ms\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 3931363,\n        \"min\": 17020,\n        \"max\": 64681452,\n        \"num_unique_values\": 391,\n        \"samples\": [\n          2046369,\n          992003,\n          1840000\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"temps_total_min\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 65.52273064935392,\n        \"min\": 0.2836666666666667,\n        \"max\": 1078.0242,\n        \"num_unique_values\": 391,\n        \"samples\": [\n          34.10615,\n          16.533383333333333,\n          30.666666666666668\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    }\n  ]\n}"
-            }
-          },
-          "metadata": {}
-        },
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "\n",
-            "💾 Liste exportée dans: suspects_to_review.csv\n",
-            "📝 Instructions:\n",
-            "   1. Ouvrez le fichier CSV\n",
-            "   2. Ajoutez une colonne 'supprimer' avec 'oui' ou 'non'\n",
-            "   3. Sauvegardez et réexécutez la cellule suivante\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "# Charger vos choix\n",
-        "choix = pd.read_csv('/content/drive/MyDrive/Spotify/suspects_to_review1.csv')\n",
-        "\n",
-        "# Vérifier si la colonne existe\n",
-        "if 'supprimer' not in choix.columns:\n",
-        "    print(\"❌ Ajoutez d'abord une colonne 'supprimer' dans le CSV avec 'oui' ou 'non'\")\n",
-        "else:\n",
-        "    # Filtrer ce qui doit être supprimé\n",
-        "    to_remove = choix[choix['supprimer'].str.lower() == 'oui'][['trackName', 'artistName']]\n",
-        "\n",
-        "    print(f\"🗑️ {len(to_remove)} pistes uniques à supprimer:\")\n",
-        "    display(to_remove)\n",
-        "\n",
-        "    # Créer un identifiant unique pour matcher\n",
-        "    streaming['track_id'] = streaming['trackName'] + '|||' + streaming['artistName']\n",
-        "    to_remove['track_id'] = to_remove['trackName'] + '|||' + to_remove['artistName']\n",
-        "\n",
-        "    # Supprimer\n",
-        "    before = len(streaming)\n",
-        "    streaming = streaming[~streaming['track_id'].isin(to_remove['track_id'])].copy()\n",
-        "    after = len(streaming)\n",
-        "\n",
-        "    # Nettoyer\n",
-        "    streaming.drop(['is_suspect', 'track_id'], axis=1, inplace=True)\n",
-        "\n",
-        "    print(f\"\\n✅ Suppression effectuée:\")\n",
-        "    print(f\"   Avant: {before} écoutes\")\n",
-        "    print(f\"   Après: {after} écoutes\")\n",
-        "    print(f\"   Supprimées: {before - after} écoutes\")"
-      ],
-      "metadata": {
-        "id": "s83O2KBtMvSa",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 528
-        },
-        "outputId": "b74d88ad-ab6e-4c62-b63a-757af3790f9a"
-      },
-      "execution_count": 14,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "🗑️ 288 pistes uniques à supprimer:\n"
-          ]
-        },
-        {
-          "output_type": "display_data",
-          "data": {
-            "text/plain": [
-              "                           trackName         artistName\n",
-              "0           Black Noise Thunderstorm  MKG Sound Library\n",
-              "1             Deep Sleep Brown Noise       Bits & Noise\n",
-              "2                 Brown Noise Dreams    Focus Frequency\n",
-              "3           Brown Noise Intelligence               BBVB\n",
-              "4          Big Waterfall Brown Noise            Fortuna\n",
-              "..                               ...                ...\n",
-              "382                 Through the Fire         Chaka Khan\n",
-              "388  Brown Noise - 1.400 Hz - Cutoff    Technical Sleep\n",
-              "396       Troubled Waters / Homesick            OG DAYV\n",
-              "397             Under the Bodhi Tree         Native Zen\n",
-              "399            Waves of Brown Part 2             Caalyx\n",
-              "\n",
-              "[288 rows x 2 columns]"
-            ],
-            "text/html": [
-              "\n",
-              "  <div id=\"df-97f7c50d-8247-4d12-8903-0fd8b0ce21aa\" class=\"colab-df-container\">\n",
-              "    <div>\n",
-              "<style scoped>\n",
-              "    .dataframe tbody tr th:only-of-type {\n",
-              "        vertical-align: middle;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe tbody tr th {\n",
-              "        vertical-align: top;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe thead th {\n",
-              "        text-align: right;\n",
-              "    }\n",
-              "</style>\n",
-              "<table border=\"1\" class=\"dataframe\">\n",
-              "  <thead>\n",
-              "    <tr style=\"text-align: right;\">\n",
-              "      <th></th>\n",
-              "      <th>trackName</th>\n",
-              "      <th>artistName</th>\n",
-              "    </tr>\n",
-              "  </thead>\n",
-              "  <tbody>\n",
-              "    <tr>\n",
-              "      <th>0</th>\n",
-              "      <td>Black Noise Thunderstorm</td>\n",
-              "      <td>MKG Sound Library</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>1</th>\n",
-              "      <td>Deep Sleep Brown Noise</td>\n",
-              "      <td>Bits &amp; Noise</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>2</th>\n",
-              "      <td>Brown Noise Dreams</td>\n",
-              "      <td>Focus Frequency</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>3</th>\n",
-              "      <td>Brown Noise Intelligence</td>\n",
-              "      <td>BBVB</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>4</th>\n",
-              "      <td>Big Waterfall Brown Noise</td>\n",
-              "      <td>Fortuna</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>...</th>\n",
-              "      <td>...</td>\n",
-              "      <td>...</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>382</th>\n",
-              "      <td>Through the Fire</td>\n",
-              "      <td>Chaka Khan</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>388</th>\n",
-              "      <td>Brown Noise - 1.400 Hz - Cutoff</td>\n",
-              "      <td>Technical Sleep</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>396</th>\n",
-              "      <td>Troubled Waters / Homesick</td>\n",
-              "      <td>OG DAYV</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>397</th>\n",
-              "      <td>Under the Bodhi Tree</td>\n",
-              "      <td>Native Zen</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>399</th>\n",
-              "      <td>Waves of Brown Part 2</td>\n",
-              "      <td>Caalyx</td>\n",
-              "    </tr>\n",
-              "  </tbody>\n",
-              "</table>\n",
-              "<p>288 rows × 2 columns</p>\n",
-              "</div>\n",
-              "    <div class=\"colab-df-buttons\">\n",
-              "\n",
-              "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-97f7c50d-8247-4d12-8903-0fd8b0ce21aa')\"\n",
-              "            title=\"Convert this dataframe to an interactive table.\"\n",
-              "            style=\"display:none;\">\n",
-              "\n",
-              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
-              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
-              "  </svg>\n",
-              "    </button>\n",
-              "\n",
-              "  <style>\n",
-              "    .colab-df-container {\n",
-              "      display:flex;\n",
-              "      gap: 12px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert {\n",
-              "      background-color: #E8F0FE;\n",
-              "      border: none;\n",
-              "      border-radius: 50%;\n",
-              "      cursor: pointer;\n",
-              "      display: none;\n",
-              "      fill: #1967D2;\n",
-              "      height: 32px;\n",
-              "      padding: 0 0 0 0;\n",
-              "      width: 32px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert:hover {\n",
-              "      background-color: #E2EBFA;\n",
-              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "      fill: #174EA6;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-buttons div {\n",
-              "      margin-bottom: 4px;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert {\n",
-              "      background-color: #3B4455;\n",
-              "      fill: #D2E3FC;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert:hover {\n",
-              "      background-color: #434B5C;\n",
-              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
-              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
-              "      fill: #FFFFFF;\n",
-              "    }\n",
-              "  </style>\n",
-              "\n",
-              "    <script>\n",
-              "      const buttonEl =\n",
-              "        document.querySelector('#df-97f7c50d-8247-4d12-8903-0fd8b0ce21aa button.colab-df-convert');\n",
-              "      buttonEl.style.display =\n",
-              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "\n",
-              "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-97f7c50d-8247-4d12-8903-0fd8b0ce21aa');\n",
-              "        const dataTable =\n",
-              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
-              "                                                    [key], {});\n",
-              "        if (!dataTable) return;\n",
-              "\n",
-              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
-              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
-              "          + ' to learn more about interactive tables.';\n",
-              "        element.innerHTML = '';\n",
-              "        dataTable['output_type'] = 'display_data';\n",
-              "        await google.colab.output.renderOutput(dataTable, element);\n",
-              "        const docLink = document.createElement('div');\n",
-              "        docLink.innerHTML = docLinkHtml;\n",
-              "        element.appendChild(docLink);\n",
-              "      }\n",
-              "    </script>\n",
-              "  </div>\n",
-              "\n",
-              "\n",
-              "    <div id=\"df-f4c6c450-e4f5-4c8d-a925-debbf1089199\">\n",
-              "      <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-f4c6c450-e4f5-4c8d-a925-debbf1089199')\"\n",
-              "                title=\"Suggest charts\"\n",
-              "                style=\"display:none;\">\n",
-              "\n",
-              "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
-              "     width=\"24px\">\n",
-              "    <g>\n",
-              "        <path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z\"/>\n",
-              "    </g>\n",
-              "</svg>\n",
-              "      </button>\n",
-              "\n",
-              "<style>\n",
-              "  .colab-df-quickchart {\n",
-              "      --bg-color: #E8F0FE;\n",
-              "      --fill-color: #1967D2;\n",
-              "      --hover-bg-color: #E2EBFA;\n",
-              "      --hover-fill-color: #174EA6;\n",
-              "      --disabled-fill-color: #AAA;\n",
-              "      --disabled-bg-color: #DDD;\n",
-              "  }\n",
-              "\n",
-              "  [theme=dark] .colab-df-quickchart {\n",
-              "      --bg-color: #3B4455;\n",
-              "      --fill-color: #D2E3FC;\n",
-              "      --hover-bg-color: #434B5C;\n",
-              "      --hover-fill-color: #FFFFFF;\n",
-              "      --disabled-bg-color: #3B4455;\n",
-              "      --disabled-fill-color: #666;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart {\n",
-              "    background-color: var(--bg-color);\n",
-              "    border: none;\n",
-              "    border-radius: 50%;\n",
-              "    cursor: pointer;\n",
-              "    display: none;\n",
-              "    fill: var(--fill-color);\n",
-              "    height: 32px;\n",
-              "    padding: 0;\n",
-              "    width: 32px;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart:hover {\n",
-              "    background-color: var(--hover-bg-color);\n",
-              "    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "    fill: var(--button-hover-fill-color);\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart-complete:disabled,\n",
-              "  .colab-df-quickchart-complete:disabled:hover {\n",
-              "    background-color: var(--disabled-bg-color);\n",
-              "    fill: var(--disabled-fill-color);\n",
-              "    box-shadow: none;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-spinner {\n",
-              "    border: 2px solid var(--fill-color);\n",
-              "    border-color: transparent;\n",
-              "    border-bottom-color: var(--fill-color);\n",
-              "    animation:\n",
-              "      spin 1s steps(1) infinite;\n",
-              "  }\n",
-              "\n",
-              "  @keyframes spin {\n",
-              "    0% {\n",
-              "      border-color: transparent;\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "      border-left-color: var(--fill-color);\n",
-              "    }\n",
-              "    20% {\n",
-              "      border-color: transparent;\n",
-              "      border-left-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "    }\n",
-              "    30% {\n",
-              "      border-color: transparent;\n",
-              "      border-left-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "      border-right-color: var(--fill-color);\n",
-              "    }\n",
-              "    40% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "    }\n",
-              "    60% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "    }\n",
-              "    80% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "    }\n",
-              "    90% {\n",
-              "      border-color: transparent;\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "    }\n",
-              "  }\n",
-              "</style>\n",
-              "\n",
-              "      <script>\n",
-              "        async function quickchart(key) {\n",
-              "          const quickchartButtonEl =\n",
-              "            document.querySelector('#' + key + ' button');\n",
-              "          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.\n",
-              "          quickchartButtonEl.classList.add('colab-df-spinner');\n",
-              "          try {\n",
-              "            const charts = await google.colab.kernel.invokeFunction(\n",
-              "                'suggestCharts', [key], {});\n",
-              "          } catch (error) {\n",
-              "            console.error('Error during call to suggestCharts:', error);\n",
-              "          }\n",
-              "          quickchartButtonEl.classList.remove('colab-df-spinner');\n",
-              "          quickchartButtonEl.classList.add('colab-df-quickchart-complete');\n",
-              "        }\n",
-              "        (() => {\n",
-              "          let quickchartButtonEl =\n",
-              "            document.querySelector('#df-f4c6c450-e4f5-4c8d-a925-debbf1089199 button');\n",
-              "          quickchartButtonEl.style.display =\n",
-              "            google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "        })();\n",
-              "      </script>\n",
-              "    </div>\n",
-              "\n",
-              "  <div id=\"id_b22e24d4-1447-4977-a3a9-6963df23b91f\">\n",
-              "    <style>\n",
-              "      .colab-df-generate {\n",
-              "        background-color: #E8F0FE;\n",
-              "        border: none;\n",
-              "        border-radius: 50%;\n",
-              "        cursor: pointer;\n",
-              "        display: none;\n",
-              "        fill: #1967D2;\n",
-              "        height: 32px;\n",
-              "        padding: 0 0 0 0;\n",
-              "        width: 32px;\n",
-              "      }\n",
-              "\n",
-              "      .colab-df-generate:hover {\n",
-              "        background-color: #E2EBFA;\n",
-              "        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "        fill: #174EA6;\n",
-              "      }\n",
-              "\n",
-              "      [theme=dark] .colab-df-generate {\n",
-              "        background-color: #3B4455;\n",
-              "        fill: #D2E3FC;\n",
-              "      }\n",
-              "\n",
-              "      [theme=dark] .colab-df-generate:hover {\n",
-              "        background-color: #434B5C;\n",
-              "        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
-              "        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
-              "        fill: #FFFFFF;\n",
-              "      }\n",
-              "    </style>\n",
-              "    <button class=\"colab-df-generate\" onclick=\"generateWithVariable('to_remove')\"\n",
-              "            title=\"Generate code using this dataframe.\"\n",
-              "            style=\"display:none;\">\n",
-              "\n",
-              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
-              "       width=\"24px\">\n",
-              "    <path d=\"M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z\"/>\n",
-              "  </svg>\n",
-              "    </button>\n",
-              "    <script>\n",
-              "      (() => {\n",
-              "      const buttonEl =\n",
-              "        document.querySelector('#id_b22e24d4-1447-4977-a3a9-6963df23b91f button.colab-df-generate');\n",
-              "      buttonEl.style.display =\n",
-              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "\n",
-              "      buttonEl.onclick = () => {\n",
-              "        google.colab.notebook.generateWithVariable('to_remove');\n",
-              "      }\n",
-              "      })();\n",
-              "    </script>\n",
-              "  </div>\n",
-              "\n",
-              "    </div>\n",
-              "  </div>\n"
-            ],
-            "application/vnd.google.colaboratory.intrinsic+json": {
-              "type": "dataframe",
-              "variable_name": "to_remove",
-              "summary": "{\n  \"name\": \"to_remove\",\n  \"rows\": 288,\n  \"fields\": [\n    {\n      \"column\": \"trackName\",\n      \"properties\": {\n        \"dtype\": \"string\",\n        \"num_unique_values\": 281,\n        \"samples\": [\n          \"Dream Full Of Brown Noise\",\n          \"Centered Brown Noise\",\n          \"Earthly Winds\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"artistName\",\n      \"properties\": {\n        \"dtype\": \"string\",\n        \"num_unique_values\": 194,\n        \"samples\": [\n          \"Expheria\",\n          \"Trap Of Sounds\",\n          \"Zen Flutes\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    }\n  ]\n}"
-            }
-          },
-          "metadata": {}
-        },
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "\n",
-            "✅ Suppression effectuée:\n",
-            "   Avant: 22127 écoutes\n",
-            "   Après: 19843 écoutes\n",
-            "   Supprimées: 2284 écoutes\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "#STATISTIQUES TEMPORELLES\n",
-        "#Temps total d'écoute en 2025\n",
-        "total_time_listening = streaming.msPlayed.sum() / 3600000\n",
-        "print(total_time_listening)\n",
-        "\n",
-        "#Plage temporelle de l'ensemble de données\n",
-        "streaming.endTime.min(), streaming.endTime.max()\n",
-        "\n",
-        "#moyenne de ms jouées chaque jour au cours de l'année (jusqu'au 05/12)\n",
-        "year_ms = streaming.msPlayed.sum() / (pd.Timestamp(streaming.endTime.max()) - pd.Timestamp(streaming.endTime.min())).days\n",
-        "\n",
-        "#minutes par jour\n",
-        "avg_mins_day = year_ms / 60000\n",
-        "\n",
-        "#heures par jour\n",
-        "avg_hours_day = year_ms / 3600000\n",
-        "print(avg_hours_day)\n",
-        "\n",
-        "#Regardez les écoutes mensuelles\n",
-        "streaming['month'] = streaming['endTime'].dt.month # Create 'month' column\n",
-        "monthly_listening = streaming.groupby(\"month\")[\"msPlayed\"].sum().reset_index()\n",
-        "monthly_listening[\"hours_listened\"] =  monthly_listening[\"msPlayed\"] / 3600000\n",
-        "monthly_listening.sort_values(\"hours_listened\", ascending=False)\n",
-        "\n",
-        "#ajouter une heure de la journée\n",
-        "streaming['hour'] = streaming.endTime.dt.hour\n",
-        "\n",
-        "#définir des plages horaires pour l'écoute horaire\n",
-        "def time_bucket(hour):\n",
-        "    if 3 <= hour < 11:\n",
-        "        return 'Morning'\n",
-        "    elif 11 <= hour < 18:\n",
-        "        return 'Afternoon'\n",
-        "    else:\n",
-        "        return 'Night'\n",
-        "\n",
-        "#fonction d'application\n",
-        "streaming['time_bucket'] = streaming['hour'].apply(time_bucket)\n",
-        "\n",
-        "#résultats agrégés pour analyser l'heure d'écoute\n",
-        "daily_listening = streaming.groupby(\"time_bucket\")[\"msPlayed\"].sum().reset_index()\n",
-        "daily_listening[\"hours_listened\"] =  daily_listening[\"msPlayed\"] / 3600000\n",
-        "daily_listening.sort_values(\"hours_listened\", ascending=False)\n",
-        "daily_listening[\"percentage of time over year listening\"] = (daily_listening[\"hours_listened\"]/total_time_listening)*100\n",
-        "\n",
-        "#Regardez l'écoute horaire\n",
-        "hour_listening = streaming.groupby(\"hour\")[\"msPlayed\"].sum().reset_index()\n",
-        "hour_listening[\"hours_listened\"] =  hour_listening[\"msPlayed\"] / 3600000\n",
-        "hour_listening.sort_values(\"hours_listened\", ascending=False)"
-      ],
-      "metadata": {
-        "id": "spzizM4jE5KS",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 837
-        },
-        "outputId": "c279dec5-cf5c-419d-b4d1-4fec992abba2"
-      },
-      "execution_count": 15,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "881.6882938888889\n",
-            "2.4836289968701095\n"
-          ]
-        },
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": [
-              "    hour   msPlayed  hours_listened\n",
-              "18    18  242648130       67.402258\n",
-              "14    14  234294018       65.081672\n",
-              "15    15  233827475       64.952076\n",
-              "13    13  225119441       62.533178\n",
-              "17    17  225083617       62.523227\n",
-              "16    16  225053572       62.514881\n",
-              "19    19  210007013       58.335281\n",
-              "12    12  192526169       53.479491\n",
-              "11    11  192295010       53.415281\n",
-              "10    10  190452917       52.903588\n",
-              "20    20  182604338       50.723427\n",
-              "9      9  152568013       42.380004\n",
-              "21    21  135564026       37.656674\n",
-              "22    22  113119531       31.422092\n",
-              "23    23  108027889       30.007747\n",
-              "0      0   79758705       22.155196\n",
-              "8      8   75360298       20.933416\n",
-              "7      7   50260535       13.961260\n",
-              "1      1   41350198       11.486166\n",
-              "6      6   35719261        9.922017\n",
-              "2      2   16147437        4.485399\n",
-              "5      5    4637715        1.288254\n",
-              "3      3    4044457        1.123460\n",
-              "4      4    3608093        1.002248"
-            ],
-            "text/html": [
-              "\n",
-              "  <div id=\"df-6c56993e-257f-4493-b7d4-1419e7f05158\" class=\"colab-df-container\">\n",
-              "    <div>\n",
-              "<style scoped>\n",
-              "    .dataframe tbody tr th:only-of-type {\n",
-              "        vertical-align: middle;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe tbody tr th {\n",
-              "        vertical-align: top;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe thead th {\n",
-              "        text-align: right;\n",
-              "    }\n",
-              "</style>\n",
-              "<table border=\"1\" class=\"dataframe\">\n",
-              "  <thead>\n",
-              "    <tr style=\"text-align: right;\">\n",
-              "      <th></th>\n",
-              "      <th>hour</th>\n",
-              "      <th>msPlayed</th>\n",
-              "      <th>hours_listened</th>\n",
-              "    </tr>\n",
-              "  </thead>\n",
-              "  <tbody>\n",
-              "    <tr>\n",
-              "      <th>18</th>\n",
-              "      <td>18</td>\n",
-              "      <td>242648130</td>\n",
-              "      <td>67.402258</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>14</th>\n",
-              "      <td>14</td>\n",
-              "      <td>234294018</td>\n",
-              "      <td>65.081672</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>15</th>\n",
-              "      <td>15</td>\n",
-              "      <td>233827475</td>\n",
-              "      <td>64.952076</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>13</th>\n",
-              "      <td>13</td>\n",
-              "      <td>225119441</td>\n",
-              "      <td>62.533178</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>17</th>\n",
-              "      <td>17</td>\n",
-              "      <td>225083617</td>\n",
-              "      <td>62.523227</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>16</th>\n",
-              "      <td>16</td>\n",
-              "      <td>225053572</td>\n",
-              "      <td>62.514881</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>19</th>\n",
-              "      <td>19</td>\n",
-              "      <td>210007013</td>\n",
-              "      <td>58.335281</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>12</th>\n",
-              "      <td>12</td>\n",
-              "      <td>192526169</td>\n",
-              "      <td>53.479491</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>11</th>\n",
-              "      <td>11</td>\n",
-              "      <td>192295010</td>\n",
-              "      <td>53.415281</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>10</th>\n",
-              "      <td>10</td>\n",
-              "      <td>190452917</td>\n",
-              "      <td>52.903588</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>20</th>\n",
-              "      <td>20</td>\n",
-              "      <td>182604338</td>\n",
-              "      <td>50.723427</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>9</th>\n",
-              "      <td>9</td>\n",
-              "      <td>152568013</td>\n",
-              "      <td>42.380004</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>21</th>\n",
-              "      <td>21</td>\n",
-              "      <td>135564026</td>\n",
-              "      <td>37.656674</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>22</th>\n",
-              "      <td>22</td>\n",
-              "      <td>113119531</td>\n",
-              "      <td>31.422092</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>23</th>\n",
-              "      <td>23</td>\n",
-              "      <td>108027889</td>\n",
-              "      <td>30.007747</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>0</th>\n",
-              "      <td>0</td>\n",
-              "      <td>79758705</td>\n",
-              "      <td>22.155196</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>8</th>\n",
-              "      <td>8</td>\n",
-              "      <td>75360298</td>\n",
-              "      <td>20.933416</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>7</th>\n",
-              "      <td>7</td>\n",
-              "      <td>50260535</td>\n",
-              "      <td>13.961260</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>1</th>\n",
-              "      <td>1</td>\n",
-              "      <td>41350198</td>\n",
-              "      <td>11.486166</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>6</th>\n",
-              "      <td>6</td>\n",
-              "      <td>35719261</td>\n",
-              "      <td>9.922017</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>2</th>\n",
-              "      <td>2</td>\n",
-              "      <td>16147437</td>\n",
-              "      <td>4.485399</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>5</th>\n",
-              "      <td>5</td>\n",
-              "      <td>4637715</td>\n",
-              "      <td>1.288254</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>3</th>\n",
-              "      <td>3</td>\n",
-              "      <td>4044457</td>\n",
-              "      <td>1.123460</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>4</th>\n",
-              "      <td>4</td>\n",
-              "      <td>3608093</td>\n",
-              "      <td>1.002248</td>\n",
-              "    </tr>\n",
-              "  </tbody>\n",
-              "</table>\n",
-              "</div>\n",
-              "    <div class=\"colab-df-buttons\">\n",
-              "\n",
-              "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-6c56993e-257f-4493-b7d4-1419e7f05158')\"\n",
-              "            title=\"Convert this dataframe to an interactive table.\"\n",
-              "            style=\"display:none;\">\n",
-              "\n",
-              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
-              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
-              "  </svg>\n",
-              "    </button>\n",
-              "\n",
-              "  <style>\n",
-              "    .colab-df-container {\n",
-              "      display:flex;\n",
-              "      gap: 12px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert {\n",
-              "      background-color: #E8F0FE;\n",
-              "      border: none;\n",
-              "      border-radius: 50%;\n",
-              "      cursor: pointer;\n",
-              "      display: none;\n",
-              "      fill: #1967D2;\n",
-              "      height: 32px;\n",
-              "      padding: 0 0 0 0;\n",
-              "      width: 32px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert:hover {\n",
-              "      background-color: #E2EBFA;\n",
-              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "      fill: #174EA6;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-buttons div {\n",
-              "      margin-bottom: 4px;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert {\n",
-              "      background-color: #3B4455;\n",
-              "      fill: #D2E3FC;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert:hover {\n",
-              "      background-color: #434B5C;\n",
-              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
-              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
-              "      fill: #FFFFFF;\n",
-              "    }\n",
-              "  </style>\n",
-              "\n",
-              "    <script>\n",
-              "      const buttonEl =\n",
-              "        document.querySelector('#df-6c56993e-257f-4493-b7d4-1419e7f05158 button.colab-df-convert');\n",
-              "      buttonEl.style.display =\n",
-              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "\n",
-              "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-6c56993e-257f-4493-b7d4-1419e7f05158');\n",
-              "        const dataTable =\n",
-              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
-              "                                                    [key], {});\n",
-              "        if (!dataTable) return;\n",
-              "\n",
-              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
-              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
-              "          + ' to learn more about interactive tables.';\n",
-              "        element.innerHTML = '';\n",
-              "        dataTable['output_type'] = 'display_data';\n",
-              "        await google.colab.output.renderOutput(dataTable, element);\n",
-              "        const docLink = document.createElement('div');\n",
-              "        docLink.innerHTML = docLinkHtml;\n",
-              "        element.appendChild(docLink);\n",
-              "      }\n",
-              "    </script>\n",
-              "  </div>\n",
-              "\n",
-              "\n",
-              "    <div id=\"df-93b6a5bd-1909-4d03-baee-76b72b7c6652\">\n",
-              "      <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-93b6a5bd-1909-4d03-baee-76b72b7c6652')\"\n",
-              "                title=\"Suggest charts\"\n",
-              "                style=\"display:none;\">\n",
-              "\n",
-              "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
-              "     width=\"24px\">\n",
-              "    <g>\n",
-              "        <path d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z\"/>\n",
-              "    </g>\n",
-              "</svg>\n",
-              "      </button>\n",
-              "\n",
-              "<style>\n",
-              "  .colab-df-quickchart {\n",
-              "      --bg-color: #E8F0FE;\n",
-              "      --fill-color: #1967D2;\n",
-              "      --hover-bg-color: #E2EBFA;\n",
-              "      --hover-fill-color: #174EA6;\n",
-              "      --disabled-fill-color: #AAA;\n",
-              "      --disabled-bg-color: #DDD;\n",
-              "  }\n",
-              "\n",
-              "  [theme=dark] .colab-df-quickchart {\n",
-              "      --bg-color: #3B4455;\n",
-              "      --fill-color: #D2E3FC;\n",
-              "      --hover-bg-color: #434B5C;\n",
-              "      --hover-fill-color: #FFFFFF;\n",
-              "      --disabled-bg-color: #3B4455;\n",
-              "      --disabled-fill-color: #666;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart {\n",
-              "    background-color: var(--bg-color);\n",
-              "    border: none;\n",
-              "    border-radius: 50%;\n",
-              "    cursor: pointer;\n",
-              "    display: none;\n",
-              "    fill: var(--fill-color);\n",
-              "    height: 32px;\n",
-              "    padding: 0;\n",
-              "    width: 32px;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart:hover {\n",
-              "    background-color: var(--hover-bg-color);\n",
-              "    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "    fill: var(--button-hover-fill-color);\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-quickchart-complete:disabled,\n",
-              "  .colab-df-quickchart-complete:disabled:hover {\n",
-              "    background-color: var(--disabled-bg-color);\n",
-              "    fill: var(--disabled-fill-color);\n",
-              "    box-shadow: none;\n",
-              "  }\n",
-              "\n",
-              "  .colab-df-spinner {\n",
-              "    border: 2px solid var(--fill-color);\n",
-              "    border-color: transparent;\n",
-              "    border-bottom-color: var(--fill-color);\n",
-              "    animation:\n",
-              "      spin 1s steps(1) infinite;\n",
-              "  }\n",
-              "\n",
-              "  @keyframes spin {\n",
-              "    0% {\n",
-              "      border-color: transparent;\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "      border-left-color: var(--fill-color);\n",
-              "    }\n",
-              "    20% {\n",
-              "      border-color: transparent;\n",
-              "      border-left-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "    }\n",
-              "    30% {\n",
-              "      border-color: transparent;\n",
-              "      border-left-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "      border-right-color: var(--fill-color);\n",
-              "    }\n",
-              "    40% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "      border-top-color: var(--fill-color);\n",
-              "    }\n",
-              "    60% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "    }\n",
-              "    80% {\n",
-              "      border-color: transparent;\n",
-              "      border-right-color: var(--fill-color);\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "    }\n",
-              "    90% {\n",
-              "      border-color: transparent;\n",
-              "      border-bottom-color: var(--fill-color);\n",
-              "    }\n",
-              "  }\n",
-              "</style>\n",
-              "\n",
-              "      <script>\n",
-              "        async function quickchart(key) {\n",
-              "          const quickchartButtonEl =\n",
-              "            document.querySelector('#' + key + ' button');\n",
-              "          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.\n",
-              "          quickchartButtonEl.classList.add('colab-df-spinner');\n",
-              "          try {\n",
-              "            const charts = await google.colab.kernel.invokeFunction(\n",
-              "                'suggestCharts', [key], {});\n",
-              "          } catch (error) {\n",
-              "            console.error('Error during call to suggestCharts:', error);\n",
-              "          }\n",
-              "          quickchartButtonEl.classList.remove('colab-df-spinner');\n",
-              "          quickchartButtonEl.classList.add('colab-df-quickchart-complete');\n",
-              "        }\n",
-              "        (() => {\n",
-              "          let quickchartButtonEl =\n",
-              "            document.querySelector('#df-93b6a5bd-1909-4d03-baee-76b72b7c6652 button');\n",
-              "          quickchartButtonEl.style.display =\n",
-              "            google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "        })();\n",
-              "      </script>\n",
-              "    </div>\n",
-              "\n",
-              "    </div>\n",
-              "  </div>\n"
-            ],
-            "application/vnd.google.colaboratory.intrinsic+json": {
-              "type": "dataframe",
-              "summary": "{\n  \"name\": \"hour_listening\",\n  \"rows\": 24,\n  \"fields\": [\n    {\n      \"column\": \"hour\",\n      \"properties\": {\n        \"dtype\": \"int32\",\n        \"num_unique_values\": 24,\n        \"samples\": [\n          11,\n          8,\n          18\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"msPlayed\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 86578322,\n        \"min\": 3608093,\n        \"max\": 242648130,\n        \"num_unique_values\": 24,\n        \"samples\": [\n          192295010,\n          75360298,\n          242648130\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"hours_listened\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 24.04953401675758,\n        \"min\": 1.0022480555555555,\n        \"max\": 67.40225833333334,\n        \"num_unique_values\": 24,\n        \"samples\": [\n          53.415280555555555,\n          20.93341611111111,\n          67.40225833333334\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    }\n  ]\n}"
-            }
-          },
-          "metadata": {},
-          "execution_count": 15
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "# Récupérer les durées des chansons et les genres\n",
-        "#CODE QUI MARCHE !!!!!!!!!!!!!!!!\n",
-        "# Utilisation de lastfm API\n",
-        "\n",
-        "import requests\n",
-        "import time\n",
-        "import pandas as pd\n",
-        "from concurrent.futures import ThreadPoolExecutor, as_completed\n",
-        "\n",
-        "\n",
-        "LASTFM_API_KEY = '83100e2042c7a645ac9b98747ec29b76'\n",
-        "\n",
-        "def get_artist_genres_lastfm(artist_name):\n",
-        "    \"\"\"Récupère les genres d'un artiste via Last.fm API\"\"\"\n",
-        "    url = \"http://ws.audioscrobbler.com/2.0/\"\n",
-        "    params = {\n",
-        "        'method': 'artist.gettoptags',\n",
-        "        'artist': artist_name,\n",
-        "        'api_key': LASTFM_API_KEY,\n",
-        "        'format': 'json'\n",
-        "    }\n",
-        "\n",
-        "    try:\n",
-        "        response = requests.get(url, params=params, timeout=5)\n",
-        "        data = response.json()\n",
-        "        time.sleep(0.2) # Add a small delay to respect rate limits\n",
-        "\n",
-        "        if 'toptags' in data and 'tag' in data['toptags']:\n",
-        "            genres = [tag['name'] for tag in data['toptags']['tag'][:3]]\n",
-        "            return artist_name, genres\n",
-        "        return artist_name, []\n",
-        "    except Exception as e:\n",
-        "        # print(f\"DEBUG (Genres): Error for artist {artist_name}: {e}\") # Uncomment for verbose debugging\n",
-        "        return artist_name, []\n",
-        "\n",
-        "def get_track_album_lastfm(track_name, artist_name):\n",
-        "    \"\"\"Récupère l'album avec plusieurs tentatives\"\"\"\n",
-        "\n",
-        "    url = \"http://ws.audioscrobbler.com/2.0/\"\n",
-        "\n",
-        "    # TENTATIVE 1 : track.getInfo\n",
-        "    params1 = {\n",
-        "        'method': 'track.getInfo',\n",
-        "        'artist': artist_name,\n",
-        "        'track': track_name,\n",
-        "        'api_key': LASTFM_API_KEY,\n",
-        "        'format': 'json'\n",
-        "    }\n",
-        "    try:\n",
-        "        response1 = requests.get(url, params=params1, timeout=5)\n",
-        "        data1 = response1.json()\n",
-        "        time.sleep(0.2) # Add a small delay to respect rate limits\n",
-        "\n",
-        "        if 'track' in data1 and 'album' in data1['track']:\n",
-        "            album_name = data1['track']['album']['title']\n",
-        "            return (track_name, artist_name), album_name\n",
-        "    except:\n",
-        "        pass\n",
-        "\n",
-        "    # TENTATIVE 2 : artist.getTopAlbums + recherche intelligente\n",
-        "    try:\n",
-        "        params2 = {\n",
-        "            'method': 'artist.gettopalbums',\n",
-        "            'artist': artist_name,\n",
-        "            'api_key': LASTFM_API_KEY,\n",
-        "            'format': 'json',\n",
-        "            'limit': 10\n",
-        "        }\n",
-        "\n",
-        "        response2 = requests.get(url, params=params2, timeout=5)\n",
-        "        data2 = response2.json()\n",
-        "        time.sleep(0.2) # Add a small delay to respect rate limits\n",
-        "\n",
-        "        if 'topalbums' in data2 and 'album' in data2['topalbums']:\n",
-        "            albums = data2['topalbums']['album']\n",
-        "\n",
-        "            # Si on a des albums, prendre le plus populaire (premier)\n",
-        "            if albums and len(albums) > 0:\n",
-        "                return (track_name, artist_name), albums[0]['name']\n",
-        "    except:\n",
-        "        pass\n",
-        "\n",
-        "    # TENTATIVE 3 : track.search (recherche floue)\n",
-        "    try:\n",
-        "        params3 = {\n",
-        "            'method': 'track.search',\n",
-        "            'track': track_name,\n",
-        "            'artist': artist_name,\n",
-        "            'api_key': LASTFM_API_KEY,\n",
-        "            'format': 'json',\n",
-        "            'limit': 1\n",
-        "        }\n",
-        "\n",
-        "        response3 = requests.get(url, params=params3, timeout=5)\n",
-        "        data3 = response3.json()\n",
-        "        time.sleep(0.2) # Add a small delay to respect rate limits\n",
-        "\n",
-        "        if 'results' in data3 and 'trackmatches' in data3['results']:\n",
-        "            tracks = data3['results']['trackmatches'].get('track', [])\n",
-        "            if tracks:\n",
-        "                # Prendre le premier résultat\n",
-        "                first_track = tracks[0] if isinstance(tracks, list) else tracks\n",
-        "                # Maintenant récupérer les infos détaillées de cette chanson\n",
-        "                params4 = {\n",
-        "                    'method': 'track.getInfo',\n",
-        "                    'artist': first_track.get('artist', artist_name),\n",
-        "                    'track': first_track.get('name', track_name),\n",
-        "                    'api_key': LASTFM_API_KEY,\n",
-        "                    'format': 'json'\n",
-        "                }\n",
-        "                response4 = requests.get(url, params=params4, timeout=5)\n",
-        "                data4 = response4.json()\n",
-        "                time.sleep(0.2) # Add a small delay to respect rate limits\n",
-        "\n",
-        "                if 'track' in data4 and 'album' in data4['track']:\n",
-        "                    return (track_name, artist_name), data4['track']['album']['title']\n",
-        "    except:\n",
-        "      pass\n",
-        "\n",
-        "    return (track_name, artist_name), None\n",
-        "\n",
-        "# ÉTAPE 1 : Récupération en parallèle des genres\n",
-        "unique_artists = [a for a in streaming['artistName'].unique() if pd.notna(a)]\n",
-        "artist_genres_dict = {}\n",
-        "\n",
-        "print(f\"Traitement de {len(unique_artists)} artistes en parallèle...\")\n",
-        "\n",
-        "with ThreadPoolExecutor(max_workers=10) as executor:\n",
-        "    futures = {executor.submit(get_artist_genres_lastfm, artist): artist for artist in unique_artists}\n",
-        "\n",
-        "    for i, future in enumerate(as_completed(futures)):\n",
-        "        artist_name, genres = future.result()\n",
-        "        artist_genres_dict[artist_name] = genres\n",
-        "\n",
-        "        if (i + 1) % 50 == 0:\n",
-        "            print(f\"Progression: {i+1}/{len(unique_artists)}\")\n",
-        "\n",
-        "print(\"Genres terminés!\")\n",
-        "\n",
-        "# ÉTAPE 2 : Préparer les données\n",
-        "streaming['duration_calculated'] = streaming.groupby(\n",
-        "    ['trackName', 'artistName']\n",
-        ")['msPlayed'].transform('mean')\n",
-        "\n",
-        "top_time_listened_songs = streaming.groupby(\n",
-        "    [\"trackName\",\n",
-        "     \"artistName\"]\n",
-        ").agg({\n",
-        "    'msPlayed': 'sum',\n",
-        "    'duration_calculated': 'first'\n",
-        "}).reset_index().sort_values('msPlayed', ascending=False)\n",
-        "\n",
-        "# ÉTAPE 3 : Récupération des albums pour les top 500 chansons\n",
-        "top_songs_subset = top_time_listened_songs.head(500)\n",
-        "unique_tracks = [(row['trackName'], row['artistName']) for _, row in top_songs_subset.iterrows()\n",
-        "                 if pd.notna(row['trackName']) and pd.notna(row['artistName'])]\n",
-        "\n",
-        "track_album_dict = {}\n",
-        "\n",
-        "print(f\"\\nTraitement de {len(unique_tracks)} chansons pour les albums en parallèle...\")\n",
-        "\n",
-        "with ThreadPoolExecutor(max_workers=5) as executor:\n",
-        "    futures = {executor.submit(get_track_album_lastfm, track, artist): (track, artist)\n",
-        "               for track, artist in unique_tracks}\n",
-        "\n",
-        "    for i, future in enumerate(as_completed(futures)):\n",
-        "        track_artist_key, album_name = future.result()\n",
-        "        track_album_dict[track_artist_key] = album_name\n",
-        "\n",
-        "        if (i + 1) % 50 == 0:\n",
-        "            print(f\"Progression: {i+1}/{len(unique_tracks)}\")\n",
-        "\n",
-        "print(\"Albums terminés!\")\n",
-        "\n",
-        "# ÉTAPE 4 : Ajouter les genres et albums\n",
-        "top_time_listened_songs['Genres'] = top_time_listened_songs['artistName'].map(artist_genres_dict)\n",
-        "\n",
-        "def get_album_for_track(row):\n",
-        "    key = (row['trackName'], row['artistName'])\n",
-        "    return track_album_dict.get(key, None)\n",
-        "\n",
-        "top_time_listened_songs['Album Name'] = top_time_listened_songs.apply(get_album_for_track, axis=1)\n",
-        "\n",
-        "# Renommer les colonnes\n",
-        "songs_times_df = top_time_listened_songs.rename(columns={\n",
-        "    'trackName': 'Song Name',\n",
-        "    'artistName': 'Artist Name',\n",
-        "    'duration_calculated': 'Duration (ms)'\n",
-        "})\n",
-        "\n",
-        "# Calculer le nombre approximatif d'écoutes\n",
-        "songs_times_df[\"No. of times listened\"] = songs_times_df[\"msPlayed\"] / songs_times_df[\"Duration (ms)\"]\n",
-        "\n",
-        "# Trier par nombre d'écoutes\n",
-        "top_songs_by_avg_listens = songs_times_df.sort_values(\"No. of times listened\", ascending=False)\n",
-        "\n",
-        "# TOP 10 SONGS\n",
-        "top_10_songs = top_songs_by_avg_listens[['Song Name', 'Artist Name', 'No. of times listened']].head(10)\n",
-        "\n",
-        "# TOP 10 ARTISTS\n",
-        "top_artists = top_songs_by_avg_listens.groupby([\"Artist Name\"])[\"No. of times listened\"].sum().sort_values(ascending=False).reset_index().head(10)\n",
-        "\n",
-        "# TOP 10 ALBUMS\n",
-        "songs_with_albums = top_songs_by_avg_listens[top_songs_by_avg_listens['Album Name'].notna()].copy() # Filter for non-NA albums\n",
-        "\n",
-        "if len(songs_with_albums) > 0:\n",
-        "    top_albums = songs_with_albums.groupby([\n",
-        "        \"Album Name\",\n",
-        "        \"Artist Name\"\n",
-        "    ])[\"No. of times listened\"].sum().sort_values(ascending=False).reset_index().head(10)\n",
-        "else:\n",
-        "    print(\"\\nAucun album trouvé. Vérifiez votre clé API Last.fm et la disponibilité des données pour ces titres.\")\n",
-        "    top_albums = pd.DataFrame(columns=[\"Album Name\", \"Artist Name\", \"No. of times listened\"])\n",
-        "\n",
-        "# TOP 10 GENRES - AVEC NORMALISATION ET DÉDOUBLONNAGE\n",
-        "songs_with_genres = top_songs_by_avg_listens[top_songs_by_avg_listens['Genres'].notna()].copy()\n",
-        "\n",
-        "# Ensure 'Genres' column contains lists, replace non-list with empty list to prevent errors during explode\n",
-        "songs_with_genres['Genres'] = songs_with_genres['Genres'].apply(lambda x: x if isinstance(x, list) else [])\n",
-        "\n",
-        "songs_times_exploded = songs_with_genres.explode('Genres')\n",
-        "\n",
-        "# Filtrer les valeurs None/NaN après l'explode et normaliser\n",
-        "songs_times_exploded = songs_times_exploded[songs_times_exploded['Genres'].notna()].copy()\n",
-        "\n",
-        "if not songs_times_exploded.empty:\n",
-        "    songs_times_exploded['Genres_normalized'] = songs_times_exploded['Genres'].astype(str).str.lower().str.strip()\n",
-        "\n",
-        "    # Mapping pour fusionner les genres similaires (ajusté pour couvrir plus de cas)\n",
-        "    genre_mapping = {\n",
-        "        'rap': 'rap', 'hip hop': 'rap', 'hip-hop': 'rap', 'rap francais': 'rap', 'french rap': 'rap', 'trap': 'rap',\n",
-        "        'pop': 'pop', 'pop music': 'pop', 'electropop': 'pop', 'dance pop': 'pop', 'synth pop': 'pop',\n",
-        "        'rock': 'rock', 'alternative rock': 'rock', 'indie rock': 'rock', 'hard rock': 'rock',\n",
-        "        'r&b': 'r&b', 'rnb': 'r&b', 'rhythm and blues': 'r&b',\n",
-        "        'electronic': 'electronic', 'electro': 'electronic', 'edm': 'electronic', 'techno': 'electronic', 'house': 'electronic',\n",
-        "        'indie': 'indie', 'indie pop': 'indie', 'alternative': 'alternative',\n",
-        "        'soul': 'soul', 'funk': 'funk', 'jazz': 'jazz', 'metal': 'metal', 'heavy metal': 'metal',\n",
-        "        'country': 'country', 'folk': 'folk', 'reggae': 'reggae', 'blues': 'blues', 'classical': 'classical',\n",
-        "        'france': 'french', 'french hip hop': 'french rap', 'nigeria': 'afrobeats', 'african': 'afrobeats', 'congo': 'soukous',\n",
-        "        'afrobeat': 'afrobeats', 'gospel': 'religious', 'world': 'world music', 'hip-hop': 'hip hop', 'rhythm and blues': 'r&b'\n",
-        "    }\n",
-        "\n",
-        "    # Appliquer le mapping\n",
-        "    songs_times_exploded['Genres_cleaned'] = songs_times_exploded['Genres_normalized'].map(\n",
-        "        lambda x: genre_mapping.get(x, x)\n",
-        "    )\n",
-        "\n",
-        "    # Grouper par genre nettoyé\n",
-        "    top_genres = songs_times_exploded.groupby(\"Genres_cleaned\")[\"No. of times listened\"].sum().sort_values(ascending=False).reset_index().head(10)\n",
-        "    top_genres.columns = [\"Genre\", \"Total Listens\"]\n",
-        "\n",
-        "    # Capitaliser les genres pour l'affichage\n",
-        "    top_genres['Genre'] = top_genres['Genre'].str.title()\n",
-        "else:\n",
-        "    top_genres = pd.DataFrame(columns=[\"Genre\", \"Total Listens\"])\n",
-        "\n",
-        "# Afficher les résultats\n",
-        "print(\"\\n\" + \"=\"*50)\n",
-        "print(\"=== TOP 10 SONGS ===\")\n",
-        "print(\"=\"*50)\n",
-        "print(top_10_songs.to_string(index=False))\n",
-        "\n",
-        "print(\"\\n\" + \"=\"*50)\n",
-        "print(\"=== TOP 10 ARTISTS ===\")\n",
-        "print(\"=\"*50)\n",
-        "print(top_artists.to_string(index=False))\n",
-        "\n",
-        "print(\"\\n\" + \"=\"*50)\n",
-        "print(\"=== TOP 10 ALBUMS ===\")\n",
-        "print(\"=\"*50)\n",
-        "if not top_albums.empty:\n",
-        "    print(top_albums.to_string(index=False))\n",
-        "else:\n",
-        "    print(\"Aucun album trouvé. Vérifiez votre clé API Last.fm et la disponibilité des données pour ces titres.\")\n",
-        "\n",
-        "print(\"\\n\" + \"=\"*50)\n",
-        "print(\"=== TOP 10 GENRES ===\")\n",
-        "print(\"=\"*50)\n",
-        "print(top_genres.to_string(index=False))\n",
-        "\n",
-        "# Statistiques de couverture\n",
-        "coverage_genres = (songs_with_genres[\"No. of times listened\"].sum() / songs_times_df[\"No. of times listened\"].sum()) * 100\n",
-        "coverage_albums = (songs_with_albums[\"No. of times listened\"].sum() / songs_times_df[\"No. of times listened\"].sum()) * 100 if not songs_with_albums.empty else 0\n",
-        "\n",
-        "print(f\"\\n📊 Couverture des genres : {coverage_genres:.1f}% de vos écoutes totales\")\n",
-        "print(f\"📀 Albums trouvés : {len(songs_with_albums)} chansons ({coverage_albums:.1f}% de vos écoutes)\")\n"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "0Av1HL8gPqla",
-        "outputId": "deffee03-dc86-47ca-be98-b949e60160ee"
-      },
-      "execution_count": 16,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Traitement de 1444 artistes en parallèle...\n",
-            "Progression: 50/1444\n",
-            "Progression: 100/1444\n",
-            "Progression: 150/1444\n",
-            "Progression: 200/1444\n",
-            "Progression: 250/1444\n",
-            "Progression: 300/1444\n",
-            "Progression: 350/1444\n",
-            "Progression: 400/1444\n",
-            "Progression: 450/1444\n",
-            "Progression: 500/1444\n",
-            "Progression: 550/1444\n",
-            "Progression: 600/1444\n",
-            "Progression: 650/1444\n",
-            "Progression: 700/1444\n",
-            "Progression: 750/1444\n",
-            "Progression: 800/1444\n",
-            "Progression: 850/1444\n",
-            "Progression: 900/1444\n",
-            "Progression: 950/1444\n",
-            "Progression: 1000/1444\n",
-            "Progression: 1050/1444\n",
-            "Progression: 1100/1444\n",
-            "Progression: 1150/1444\n",
-            "Progression: 1200/1444\n",
-            "Progression: 1250/1444\n",
-            "Progression: 1300/1444\n",
-            "Progression: 1350/1444\n",
-            "Progression: 1400/1444\n",
-            "Genres terminés!\n",
-            "\n",
-            "Traitement de 500 chansons pour les albums en parallèle...\n",
-            "Progression: 50/500\n",
-            "Progression: 100/500\n",
-            "Progression: 150/500\n",
-            "Progression: 200/500\n",
-            "Progression: 250/500\n",
-            "Progression: 300/500\n",
-            "Progression: 350/500\n",
-            "Progression: 400/500\n",
-            "Progression: 450/500\n",
-            "Progression: 500/500\n",
-            "Albums terminés!\n",
-            "\n",
-            "==================================================\n",
-            "=== TOP 10 SONGS ===\n",
-            "==================================================\n",
-            "                  Song Name     Artist Name  No. of times listened\n",
-            "                       Lego       Franglish                  112.0\n",
-            "                  PILI PILI        Booska-P                   87.0\n",
-            "O.L.Y (feat. Joé Dwèt Filé)   Lisandro Cuxi                   86.0\n",
-            "                Overbooking             L2B                   83.0\n",
-            "                     À Deux Tayron Kwidan's                   75.0\n",
-            "                   CATIMINI         Tiakola                   75.0\n",
-            "         J'ai ce qu'il faut    Warren Saada                   69.0\n",
-            "            ENTRE NOUS DEUX          Didi B                   66.0\n",
-            "       Baby (Is it a Crime)            Rema                   66.0\n",
-            "           Crime ensoleillé     La Mano 1.9                   62.0\n",
-            "\n",
-            "==================================================\n",
-            "=== TOP 10 ARTISTS ===\n",
-            "==================================================\n",
-            "Artist Name  No. of times listened\n",
-            "     Josman                  613.0\n",
-            "   Huntrill                  536.0\n",
-            "       Rsko                  457.0\n",
-            "     GIVĒON                  363.0\n",
-            "    Tiakola                  353.0\n",
-            "        L2B                  341.0\n",
-            " Alpha Wann                  337.0\n",
-            "       Leto                  333.0\n",
-            " Guy2Bezbar                  318.0\n",
-            "    Keeqaid                  312.0\n",
-            "\n",
-            "==================================================\n",
-            "=== TOP 10 ALBUMS ===\n",
-            "==================================================\n",
-            "                      Album Name  Artist Name  No. of times listened\n",
-            "                           J.O.$       Josman                  264.0\n",
-            "LE BRUIT DE LA MACHINE À BILLETS     Huntrill                  240.0\n",
-            "                       REPLICA 2 Hologram Lo'                  216.0\n",
-            "       Nés Pour Briller : Book I          L2B                  210.0\n",
-            "                            Mélo      Tiakola                  188.0\n",
-            "                           R.A.T  La Mano 1.9                  180.0\n",
-            "                         BELOVED       GIVĒON                  169.0\n",
-            "                 Nouvelle Trap 2     Huntrill                  154.0\n",
-            "                       Coco Jojo   Guy2Bezbar                  130.0\n",
-            "                       PARTICIPE      Keeqaid                  116.0\n",
-            "\n",
-            "==================================================\n",
-            "=== TOP 10 GENRES ===\n",
-            "==================================================\n",
-            "    Genre  Total Listens\n",
-            "      Rap        12073.0\n",
-            "   French         5978.0\n",
-            "  Hip Hop         5037.0\n",
-            "Afrobeats         2114.0\n",
-            "      R&B         1789.0\n",
-            "      Pop         1450.0\n",
-            "  Soukous         1332.0\n",
-            "     Soul         1325.0\n",
-            "   Africa          615.0\n",
-            "    Metal          457.0\n",
-            "\n",
-            "📊 Couverture des genres : 100.0% de vos écoutes totales\n",
-            "📀 Albums trouvés : 461 chansons (34.2% de vos écoutes)\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [],
-      "metadata": {
-        "id": "10Z_8xacKG2H"
-      },
-      "execution_count": null,
-      "outputs": []
+
+    try:
+        response = requests.get(url, params=params, timeout=5)
+        data = response.json()
+        time.sleep(0.2) # Add a small delay to respect rate limits
+
+        if 'toptags' in data and 'tag' in data['toptags']:
+            genres = [tag['name'] for tag in data['toptags']['tag'][:3]]
+            return artist_name, genres
+        return artist_name, []
+    except Exception as e:
+        # print(f"DEBUG (Genres): Error for artist {artist_name}: {e}") # Uncomment for verbose debugging
+        return artist_name, []
+
+def get_track_album_lastfm(track_name, artist_name):
+    """Récupère l'album avec plusieurs tentatives"""
+
+    url = "http://ws.audioscrobbler.com/2.0/"
+
+    # TENTATIVE 1 : track.getInfo
+    params1 = {
+        'method': 'track.getInfo',
+        'artist': artist_name,
+        'track': track_name,
+        'api_key': LASTFM_API_KEY,
+        'format': 'json'
     }
-  ]
-}
+    try:
+        response1 = requests.get(url, params=params1, timeout=5)
+        data1 = response1.json()
+        time.sleep(0.2) # Add a small delay to respect rate limits
+
+        if 'track' in data1 and 'album' in data1['track']:
+            album_name = data1['track']['album']['title']
+            return (track_name, artist_name), album_name
+    except:
+        pass
+
+    # TENTATIVE 2 : artist.getTopAlbums + recherche intelligente
+    try:
+        params2 = {
+            'method': 'artist.gettopalbums',
+            'artist': artist_name,
+            'api_key': LASTFM_API_KEY,
+            'format': 'json',
+            'limit': 10
+        }
+
+        response2 = requests.get(url, params=params2, timeout=5)
+        data2 = response2.json()
+        time.sleep(0.2) # Add a small delay to respect rate limits
+
+        if 'topalbums' in data2 and 'album' in data2['topalbums']:
+            albums = data2['topalbums']['album']
+
+            # Si on a des albums, prendre le plus populaire (premier)
+            if albums and len(albums) > 0:
+                return (track_name, artist_name), albums[0]['name']
+    except:
+        pass
+
+    # TENTATIVE 3 : track.search (recherche floue)
+    try:
+        params3 = {
+            'method': 'track.search',
+            'track': track_name,
+            'artist': artist_name,
+            'api_key': LASTFM_API_KEY,
+            'format': 'json',
+            'limit': 1
+        }
+
+        response3 = requests.get(url, params=params3, timeout=5)
+        data3 = response3.json()
+        time.sleep(0.2) # Add a small delay to respect rate limits
+
+        if 'results' in data3 and 'trackmatches' in data3['results']:
+            tracks = data3['results']['trackmatches'].get('track', [])
+            if tracks:
+                # Prendre le premier résultat
+                first_track = tracks[0] if isinstance(tracks, list) else tracks
+                # Maintenant récupérer les infos détaillées de cette chanson
+                params4 = {
+                    'method': 'track.getInfo',
+                    'artist': first_track.get('artist', artist_name),
+                    'track': first_track.get('name', track_name),
+                    'api_key': LASTFM_API_KEY,
+                    'format': 'json'
+                }
+                response4 = requests.get(url, params=params4, timeout=5)
+                data4 = response4.json()
+                time.sleep(0.2) # Add a small delay to respect rate limits
+
+                if 'track' in data4 and 'album' in data4['track']:
+                    return (track_name, artist_name), data4['track']['album']['title']
+    except:
+      pass
+
+    return (track_name, artist_name), None
+
+# ÉTAPE 1 : Récupération en parallèle des genres
+unique_artists = [a for a in streaming['artistName'].unique() if pd.notna(a)]
+artist_genres_dict = {}
+
+print(f"Traitement de {len(unique_artists)} artistes en parallèle...")
+
+with ThreadPoolExecutor(max_workers=10) as executor:
+    futures = {executor.submit(get_artist_genres_lastfm, artist): artist for artist in unique_artists}
+
+    for i, future in enumerate(as_completed(futures)):
+        artist_name, genres = future.result()
+        artist_genres_dict[artist_name] = genres
+
+        if (i + 1) % 50 == 0:
+            print(f"Progression: {i+1}/{len(unique_artists)}")
+
+print("Genres terminés!")
+
+# ÉTAPE 2 : Préparer les données
+streaming['duration_calculated'] = streaming.groupby(
+    ['trackName', 'artistName']
+)['msPlayed'].transform('mean')
+
+top_time_listened_songs = streaming.groupby(
+    ["trackName",
+     "artistName"]
+).agg({
+    'msPlayed': 'sum',
+    'duration_calculated': 'first'
+}).reset_index().sort_values('msPlayed', ascending=False)
+
+# ÉTAPE 3 : Récupération des albums pour les top 500 chansons
+top_songs_subset = top_time_listened_songs.head(500)
+unique_tracks = [(row['trackName'], row['artistName']) for _, row in top_songs_subset.iterrows()
+                 if pd.notna(row['trackName']) and pd.notna(row['artistName'])]
+
+track_album_dict = {}
+
+print(f"\nTraitement de {len(unique_tracks)} chansons pour les albums en parallèle...")
+
+with ThreadPoolExecutor(max_workers=5) as executor:
+    futures = {executor.submit(get_track_album_lastfm, track, artist): (track, artist)
+               for track, artist in unique_tracks}
+
+    for i, future in enumerate(as_completed(futures)):
+        track_artist_key, album_name = future.result()
+        track_album_dict[track_artist_key] = album_name
+
+        if (i + 1) % 50 == 0:
+            print(f"Progression: {i+1}/{len(unique_tracks)}")
+
+print("Albums terminés!")
+
+# ÉTAPE 4 : Ajouter les genres et albums
+top_time_listened_songs['Genres'] = top_time_listened_songs['artistName'].map(artist_genres_dict)
+
+def get_album_for_track(row):
+    key = (row['trackName'], row['artistName'])
+    return track_album_dict.get(key, None)
+
+top_time_listened_songs['Album Name'] = top_time_listened_songs.apply(get_album_for_track, axis=1)
+
+# Renommer les colonnes
+songs_times_df = top_time_listened_songs.rename(columns={
+    'trackName': 'Song Name',
+    'artistName': 'Artist Name',
+    'duration_calculated': 'Duration (ms)'
+})
+
+# Calculer le nombre approximatif d'écoutes
+songs_times_df["No. of times listened"] = songs_times_df["msPlayed"] / songs_times_df["Duration (ms)"]
+
+# Trier par nombre d'écoutes
+top_songs_by_avg_listens = songs_times_df.sort_values("No. of times listened", ascending=False)
+
+# TOP 10 SONGS
+top_10_songs = top_songs_by_avg_listens[['Song Name', 'Artist Name', 'No. of times listened']].head(10)
+
+# TOP 10 ARTISTS
+top_artists = top_songs_by_avg_listens.groupby(["Artist Name"])["No. of times listened"].sum().sort_values(ascending=False).reset_index().head(10)
+
+# TOP 10 ALBUMS
+songs_with_albums = top_songs_by_avg_listens[top_songs_by_avg_listens['Album Name'].notna()].copy() # Filter for non-NA albums
+
+if len(songs_with_albums) > 0:
+    top_albums = songs_with_albums.groupby([
+        "Album Name",
+        "Artist Name"
+    ])["No. of times listened"].sum().sort_values(ascending=False).reset_index().head(10)
+else:
+    print("\nAucun album trouvé. Vérifiez votre clé API Last.fm et la disponibilité des données pour ces titres.")
+    top_albums = pd.DataFrame(columns=["Album Name", "Artist Name", "No. of times listened"])
+
+# TOP 10 GENRES - AVEC NORMALISATION ET DÉDOUBLONNAGE
+songs_with_genres = top_songs_by_avg_listens[top_songs_by_avg_listens['Genres'].notna()].copy()
+
+# Ensure 'Genres' column contains lists, replace non-list with empty list to prevent errors during explode
+songs_with_genres['Genres'] = songs_with_genres['Genres'].apply(lambda x: x if isinstance(x, list) else [])
+
+songs_times_exploded = songs_with_genres.explode('Genres')
+
+# Filtrer les valeurs None/NaN après l'explode et normaliser
+songs_times_exploded = songs_times_exploded[songs_times_exploded['Genres'].notna()].copy()
+
+if not songs_times_exploded.empty:
+    songs_times_exploded['Genres_normalized'] = songs_times_exploded['Genres'].astype(str).str.lower().str.strip()
+
+    # Mapping pour fusionner les genres similaires (ajusté pour couvrir plus de cas)
+    genre_mapping = {
+        'rap': 'rap', 'hip hop': 'rap', 'hip-hop': 'rap', 'rap francais': 'rap', 'french rap': 'rap', 'trap': 'rap',
+        'pop': 'pop', 'pop music': 'pop', 'electropop': 'pop', 'dance pop': 'pop', 'synth pop': 'pop',
+        'rock': 'rock', 'alternative rock': 'rock', 'indie rock': 'rock', 'hard rock': 'rock',
+        'r&b': 'r&b', 'rnb': 'r&b', 'rhythm and blues': 'r&b',
+        'electronic': 'electronic', 'electro': 'electronic', 'edm': 'electronic', 'techno': 'electronic', 'house': 'electronic',
+        'indie': 'indie', 'indie pop': 'indie', 'alternative': 'alternative',
+        'soul': 'soul', 'funk': 'funk', 'jazz': 'jazz', 'metal': 'metal', 'heavy metal': 'metal',
+        'country': 'country', 'folk': 'folk', 'reggae': 'reggae', 'blues': 'blues', 'classical': 'classical',
+        'france': 'french', 'french hip hop': 'french rap', 'nigeria': 'afrobeats', 'african': 'afrobeats', 'congo': 'soukous',
+        'afrobeat': 'afrobeats', 'gospel': 'religious', 'world': 'world music', 'hip-hop': 'hip hop', 'rhythm and blues': 'r&b'
+    }
+
+    # Appliquer le mapping
+    songs_times_exploded['Genres_cleaned'] = songs_times_exploded['Genres_normalized'].map(
+        lambda x: genre_mapping.get(x, x)
+    )
+
+    # Grouper par genre nettoyé
+    top_genres = songs_times_exploded.groupby("Genres_cleaned")["No. of times listened"].sum().sort_values(ascending=False).reset_index().head(10)
+    top_genres.columns = ["Genre", "Total Listens"]
+
+    # Capitaliser les genres pour l'affichage
+    top_genres['Genre'] = top_genres['Genre'].str.title()
+else:
+    top_genres = pd.DataFrame(columns=["Genre", "Total Listens"])
+
+# Afficher les résultats
+print("\n" + "="*50)
+print("=== TOP 10 SONGS ===")
+print("="*50)
+print(top_10_songs.to_string(index=False))
+
+print("\n" + "="*50)
+print("=== TOP 10 ARTISTS ===")
+print("="*50)
+print(top_artists.to_string(index=False))
+
+print("\n" + "="*50)
+print("=== TOP 10 ALBUMS ===")
+print("="*50)
+if not top_albums.empty:
+    print(top_albums.to_string(index=False))
+else:
+    print("Aucun album trouvé. Vérifiez votre clé API Last.fm et la disponibilité des données pour ces titres.")
+
+print("\n" + "="*50)
+print("=== TOP 10 GENRES ===")
+print("="*50)
+print(top_genres.to_string(index=False))
+
+# Statistiques de couverture
+coverage_genres = (songs_with_genres["No. of times listened"].sum() / songs_times_df["No. of times listened"].sum()) * 100
+coverage_albums = (songs_with_albums["No. of times listened"].sum() / songs_times_df["No. of times listened"].sum()) * 100 if not songs_with_albums.empty else 0
+
+print(f"\n📊 Couverture des genres : {coverage_genres:.1f}% de vos écoutes totales")
+print(f"📀 Albums trouvés : {len(songs_with_albums)} chansons ({coverage_albums:.1f}% de vos écoutes)")
+
