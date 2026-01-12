@@ -206,23 +206,6 @@ class SpotifyWrappedComplete(Scene):
 
 ---
 
-## 📁 Structure du projet
-
-```
-Spotify-Wrapped-/
-│
-├── main_final.py              # Script principal (analyse + vidéo)
-├── README.md                  # Ce fichier
-├── requirements.txt           # Dépendances Python
-├── LICENSE                    # Licence MIT
-│
-├── examples/                  # Exemples de résultats
-│   ├── sample_output.json     # Exemple de données générées
-│   └── demo_video.mp4         # Vidéo exemple
-```
-
----
-
 ## 📊 Exemples de résultats
 
 ### Statistiques générées
