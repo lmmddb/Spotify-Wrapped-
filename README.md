@@ -2,7 +2,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Manim](https://img.shields.io/badge/Manim-Community-orange.svg)](https://www.manim.community/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > Créez votre propre **Spotify Wrapped** personnalisé avec analyse complète de vos données d'écoute et génération automatique de vidéo !
 
@@ -20,8 +19,6 @@
 - [Structure du projet](#-structure-du-projet)
 - [Exemples de résultats](#-exemples-de-résultats)
 - [Problèmes courants](#-problèmes-courants)
-- [Contributions](#-contributions)
-- [Licence](#-licence)
 
 ---
 
@@ -346,6 +343,3 @@ class SpotifyWrappedComplete(Scene):
 - CAMARA M'bemba
 - DJAU Mamadou 
 
--
-
-**Fait avec ❤️ et 🎵**
